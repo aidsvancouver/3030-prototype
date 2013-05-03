@@ -289,7 +289,7 @@ label {
     .container {
         border: 0;
     }
-    background: url(../img/site-header-bg.jpg) #ddd;
+    background: url('../img/site-header-bg.jpg') #ddd;
     border-top: 10px solid $primary;
     border-bottom: 2px solid white;
     padding: 30px 0;
@@ -299,7 +299,7 @@ label {
     @include span-columns(6 of 12);
     @include hide-text;
     h1 {
-        background: url(/img/30-30-logo.png) no-repeat;
+        background: url('../img/30-30-logo.png') no-repeat;
         height: 138px;
         width: 450px;
     }
@@ -308,7 +308,7 @@ label {
 .av-logo {
     @include span-columns(1 of 12);
     @include omega(); 
-    background: url(/img/av-logo.png) no-repeat;
+    background: url('../img/av-logo.png') no-repeat;
     height: 80px;
     width: 112px;
 }
@@ -411,7 +411,7 @@ a.next:hover {
 /* CONTENT PREFACE */
 
 .page-preface {
-    background: url(../img/preface-video-bg.jpg) #333;
+    background: url('../img/preface-video-bg.jpg') #333;
     .container {
         border-color: #222;
     }
