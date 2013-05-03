@@ -1,0 +1,85 @@
+---
+layout: wrapper
+---
+{% if page.previous.url %}
+<a href="{{ page.previous.url }}" title="Previous Year: {{ page.previous.title }}" class="previous">
+	<div>{{ page.previous.title }}</div>
+</a>
+{% endif %}
+
+<section class="page-preface">
+	<div class="container">
+		<div class="video-box">
+<iframe class="video-player" src="{{ page.video }}?title=0&amp;byline=0&amp;portrait=0&amp;color=e99900" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+		</div>
+	</div>
+</section>
+
+<article class="post-template">
+	<div class="container">
+		<header>
+	        {% if page.subtitle %}<hgroup>{% endif %}
+	            {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+	            {% if page.subtitle %}<h2 class="page-subtitle">{{ page.subtitle }}</h2>{% endif %}
+	        {% if page.subtitle %}</hgroup>{% endif %}
+		</header>
+
+		<section class="article-body">
+			<div class="leftColumn">
+				<div class="statInfo info-box">
+					<h2>Statistics</h2>
+					<ul>
+						{% for item in page.statistics %}
+						<li><span class="statistic">{{ item.stat }}</span> {{ item.desc }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+
+				<div class="globalInfo info-box">
+					<h2>Global</h2>
+					<ul>
+						{% for item in page.global %}
+						<li>{{ item.item }}</li>
+						{% endfor %}	
+					</ul>
+				</div>	
+
+				<div class="nationalInfo info-box">
+					<h2>National</h2>
+					<ul>
+						{% for item in page.national %}
+						<li>{{ item.item }}</li>
+						{% endfor %}	
+					</ul>
+				</div>	
+			</div>
+
+			<div class="rightColumn">
+				<div class="yearInfo info-box">
+					<h2>In {{ page.title }}</h2>
+					<ul>
+						{% for item in page.year %}
+						<li>{{ item.item }}</li>
+						{% endfor %}		
+					</ul>
+				</div>
+
+				<div class="localInfo info-box">
+					<h2>Local</h2>
+					<ul>
+						{% for item in page.local %}
+						<li>{{ item.item }}</li>
+						{% endfor %}		
+					</ul>
+				</div>		
+			</div>
+		</section>
+	</div>
+</article>
+
+{% if page.next.url %}
+<a href="{{ page.next.url }}" title="Next Year: {{ page.next.title }}" class="next">
+	<div>{{ page.next.title }}</div>
+</a>
+{% endif %}

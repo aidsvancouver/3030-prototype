@@ -1,0 +1,7 @@
+<ul>
+	{% for post in site.posts reversed %}
+	<li class="timeline-entry"><a href="{{ post.url }}">{{ post.abbr }}</a>
+	</li>
+	{% endfor %}
+</ul>
+<button class="pullTab">Open/Close</button>

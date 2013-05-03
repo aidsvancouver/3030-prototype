@@ -1,0 +1,10 @@
+---
+layout: landing
+title: 30 Days, 30 Stories
+sidebar: false
+---
+{% for post in site.posts reversed %}
+    <article class="teaser">
+        <a href="{{ post.url }}"><h1>{{ post.abbr }}</h1></a>
+    </article>
+{% endfor %}

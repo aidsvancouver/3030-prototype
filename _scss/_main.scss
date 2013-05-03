@@ -1,0 +1,533 @@
+/* Screen Sizes */
+
+$max767: new-breakpoint(max-width 767px);
+$min768: new-breakpoint(min-width 768px);
+
+/* Colours */
+
+$primary: #09835f;
+$secondary: #21b684;
+$darkGrey: #333;
+$midGrey: #777;
+$lightGrey: #ccc;
+
+/* Mixins */
+
+@mixin placeholder($height) {
+    border: thin dotted $midGrey;
+    width: 100%;
+    height: $height;
+    background-color: $lightGrey;
+}
+
+@mixin divider {
+    border-bottom: thin solid $lightGrey;
+}
+
+
+/**** ****/
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Typography */
+
+@include font-face(Melbourne, 'https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_reg');
+@include font-face(Melbourne, 'https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_bold', bold);
+$sansSerif: verdana, sans-serif;
+$serif: serif;
+$rounded: 'Melbourne', sans-serif;
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-family: $sansSerif;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $rounded;
+    color: $primary;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1.page-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2.page-subtitle {
+    background-color: #333;
+    color: $lightGrey;
+    margin: 0 0 10px 0;
+    padding: 20px 150px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+blockquote {
+    font-family: $rounded;
+    font-size: 1.5em;
+    margin: 0 1.5em 0 2em;
+    position: relative;
+    p {
+        color: $primary;        
+        line-height: 1.25em;
+        margin: 2em 0px;
+        padding-left: 40px;
+    }
+    p:before {
+        color: $lightGrey;
+        content: '\201C';
+        font-size: 5.25em;
+        line-height: 20px;
+        margin-left: -55px;
+        position: relative;
+        top: 25px;
+        vertical-align: bottom;
+    }
+    p:after {
+
+    }
+    small {
+        font-size: 1em;
+    }
+}
+
+blockquote.pull-right {
+    @include span-columns(4);
+    float: right;
+    p {
+        margin: 0;
+    }
+}
+
+small {}
+
+abbr {}
+
+address {}
+
+cite {}
+
+dl {}
+
+dt {}
+
+dd {}
+
+code {}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/* General Layout */
+
+$thinBorder: thin solid #ddd;
+
+.container {
+    @include outer-container;
+    border-left: thin solid #ddd;
+    border-right: thin solid #ddd;
+    padding: 0px;
+    width: 1020px;
+    //max-width: 1020px;
+}
+
+.info-box {
+    padding: 10px 10px 10px 30px;
+    border-bottom: $thinBorder;
+    h2 {
+        margin-bottom: 10px;
+    }
+    ul {
+        font-family: $rounded;
+        font-size: 1.5em;
+        list-style: none;
+        margin-top: 0;
+        padding: 0;
+    }
+    li {
+        line-height: 1.2em;
+        margin-bottom: 15px;
+    }
+}
+
+.placeholder {
+    @include placeholder(400px);
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+    color: #FF6666;
+}
+
+a:hover {
+    color: #CC0000;
+}
+
+a:visited {
+    color: #FF0066;
+}
+
+/* BUTTONS, FORMS, TABLES, ETC **/
+
+table {
+    width: 100%;
+    tr {
+        border-bottom: $thinBorder;
+    }
+    td, th {
+        padding: 10px 0 10px 10px;
+    }
+    tr:nth-child(even) {
+        background-color: #EFEFEF;
+    }
+}
+
+ul.tabs {
+    padding: 0;
+    li {
+        @include inline-block;
+    }
+    li a {
+        @include button(pill, #fff);
+    }
+    li.active a {
+        @include button(pill, #666);
+        border-bottom: 0;
+    }
+    li a:hover {
+        border-color: #777777;
+    }
+}
+
+form {}
+
+fieldset {
+    border-left: 5px solid #ddd;
+    padding: 10px;
+}
+
+legend {}
+
+label {
+  clear: left;
+  float:left;
+  width:25%;
+  margin-right:0.5em;
+  padding-top:0.2em;
+  text-align:right;
+}
+
+#{$all-text-inputs}, textarea {
+  border: 1px solid green;
+  float: left;
+}
+
+#{$all-text-inputs-hover}, textarea:hover {
+  background: yellow;
+}
+
+#{$all-text-inputs-focus}, textarea:focus {
+  background: white;
+}
+
+
+/* Header */
+
+.site-header {
+    .container {
+        border: 0;
+    }
+    background: url(../img/site-header-bg.jpg) #ddd;
+    border-top: 10px solid $primary;
+    border-bottom: 2px solid white;
+    padding: 30px 0;
+}
+
+.site-name-slogan {
+    @include span-columns(6 of 12);
+    @include hide-text;
+    h1 {
+        background: url(/img/30-30-logo.png) no-repeat;
+        height: 138px;
+        width: 450px;
+    }
+}
+
+.av-logo {
+    @include span-columns(1 of 12);
+    @include omega(); 
+    background: url(/img/av-logo.png) no-repeat;
+    height: 80px;
+    width: 112px;
+}
+
+/* Navigation */
+
+.site-navigation {
+    @include span-columns(4 of 12);
+    margin-top: 60px;
+}
+
+/* Timeline */
+
+.timeline {
+    background-color: #eee;
+    ul {
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        background-color: $lightGrey;
+        margin: 5px 1px 0;
+    }
+    li:nth-child(even) {
+        background-color: $midGrey;
+    }
+    li:hover {
+        background-color: $darkGrey;
+    }    
+}
+
+.pullTab {
+    width: 100%;
+}
+
+.timeline-entry {
+    @include inline-block;
+    width: 2.9%;
+    height: 100px;
+    text-align: center;
+    a {
+        display: block;
+        margin-top: 40px;
+    }
+}
+
+.timeline-entry.active {
+    background-color: black;
+}
+
+/* FRONT PAGE */
+
+.teaser {
+    @include span-columns(3);
+    @include omega(4n);
+}
+
+/* PAGINATION */
+
+a.previous, a.previous:link, a.previous:visited,
+a.next, a.next:link, a.next:visited {
+    color: #444;
+}
+
+a.previous:hover,
+a.next:hover {
+    color: #999;
+}
+
+.previous, .next {
+    background: url('../img/arrows.png') no-repeat transparent;
+    font-family: $rounded;
+    font-size: 3em;
+    position: fixed;
+    width: 169px;
+    height: 339px;
+    top: 340px;
+    div {
+        margin-top: 135px;
+    }
+}
+
+.previous {
+    left: 0px;
+    div {
+        margin-left: 60px;
+    }}
+
+.next {
+    background-position: -169px 0;
+    right: 0px;
+    div {
+        margin-left: 20px;
+    }
+}
+
+
+/* CONTENT PREFACE */
+
+.page-preface {
+    background: url(../img/preface-video-bg.jpg) #333;
+    .container {
+        border-color: #222;
+    }
+}
+
+.video-box {
+    @include span-columns(12);
+    background-color: $primary;
+    height: 540px;
+}
+
+.video-player {
+    border: 2px solid #333;
+    margin-left: 30px;
+}
+
+/* CONTENT */
+
+.page-title {
+    margin-bottom: 0em;
+}
+
+.page-content {
+    padding: 0;
+}
+
+.article-body {
+    border-top: $thinBorder;
+}
+
+.leftColumn {
+    @include span-columns(5);
+    background-color: #eee;
+    margin-right: 0;
+    width: 42.5%;
+}
+
+.rightColumn {
+    @include span-columns(7);
+}
+
+.localInfo, .nationalInfo {
+    border-bottom: 0;
+}
+
+/* Content Sidebar */
+
+.secondary-column {
+    @include span-columns(4);
+    @include omega;
+}
+
+/* CONTENT POSTSCRIPT */
+
+.page-postscript {
+    @include clearfix;
+    .block {
+        @include media($min768) {
+            @include span-columns(4 of 8);
+            @include nth-omega(2n);
+        }
+    }
+    .block:nth-child(even) {
+        float: right;
+    }
+    .block:nth-child(2) {
+        height: 300px;
+    }
+}
+
+/* Sponsors */
+
+.sponsors {
+    .container {
+        border: 0;
+    }
+}
+
+/* SIDEBAR */
+
+.page-sidebar {
+    display: none;
+    @include media($min768) {
+        display: block;
+        background: #eee;
+        @include span-columns(4);
+        @include omega();
+    }
+}
+
+/* POSTSCRIPT */
+
+.page-postscript .block {
+    @include span-columns(12);
+
+    @include media($min768) {
+        @include span-columns(3);
+        @include nth-omega(4n);
+    }
+}
+
+/* Sponsors -- get a better naming convention... */
+
+.sponsors {
+    background-color: $lightGrey;
+    height: 300px;
+}
+
+/* FOOTER */
+
+.site-footer {
+    font-size: .9em;
+    background: $primary;
+    color: white;
+    .container {
+        padding: 20px;
+        border-color: transparent;
+    }
+}
