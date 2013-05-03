@@ -752,7 +752,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
 
 /* Header */
 .site-header {
-  background: url(../img/site-header-bg.jpg) #dddddd;
+  background: url("../img/site-header-bg.jpg") #dddddd;
   border-top: 10px solid #09835f;
   border-bottom: 2px solid white;
   padding: 30px 0; }
@@ -772,7 +772,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   .site-name-slogan:last-child {
     margin-right: 0; }
   .site-name-slogan h1 {
-    background: url(/img/30-30-logo.png) no-repeat;
+    background: url("../img/30-30-logo.png") no-repeat;
     height: 138px;
     width: 450px; }
 
@@ -782,7 +782,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   margin-right: 2.35765%;
   width: 6.17215%;
   margin-right: 0;
-  background: url(/img/av-logo.png) no-repeat;
+  background: url("../img/av-logo.png") no-repeat;
   height: 80px;
   width: 112px; }
   .av-logo:last-child {
@@ -876,7 +876,7 @@ a.next:hover {
 
 /* CONTENT PREFACE */
 .page-preface {
-  background: url(../img/preface-video-bg.jpg) #333333; }
+  background: url("../img/preface-video-bg.jpg") #333333; }
   .page-preface .container {
     border-color: #222; }
 
