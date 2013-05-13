@@ -510,7 +510,7 @@ h1.page-title {
 
 h2.page-subtitle {
   background-color: #333;
-  color: #cccccc;
+  color: #eeeeee;
   margin: 0 0 10px 0;
   padding: 20px 150px;
   text-align: center; }
@@ -518,6 +518,11 @@ h2.page-subtitle {
 h3 {
   font-size: 1.25em;
   font-weight: 600; }
+
+h4 {
+  color: #333;
+  font-weight: normal;
+  margin-bottom: 5px; }
 
 blockquote {
   font-family: "Melbourne", sans-serif;
@@ -530,7 +535,7 @@ blockquote {
     margin: 2em 0px;
     padding-left: 40px; }
   blockquote p:before {
-    color: #cccccc;
+    color: #eeeeee;
     content: '\201C';
     font-size: 5.25em;
     line-height: 20px;
@@ -588,7 +593,7 @@ hr {
   padding: 10px 10px 10px 30px;
   border-bottom: thin solid #dddddd; }
   .info-box h2 {
-    margin-bottom: 10px; }
+    margin: 12px 0 10px 0; }
   .info-box ul {
     font-family: "Melbourne", sans-serif;
     font-size: 1.5em;
@@ -603,7 +608,7 @@ hr {
   border: thin dotted #777777;
   width: 100%;
   height: 400px;
-  background-color: #cccccc; }
+  background-color: #eeeeee; }
 
 /* Links */
 a {
@@ -763,7 +768,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 48.82117%;
+  width: 40.29137%;
   background-color: transparent;
   border: 0;
   color: transparent;
@@ -774,7 +779,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   .site-name-slogan h1 {
     background: url("../img/30-30-logo.png") no-repeat;
     height: 138px;
-    width: 450px; }
+    margin-left: 40px; }
 
 .av-logo {
   display: block;
@@ -786,6 +791,22 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   height: 80px;
   width: 112px; }
   .av-logo:last-child {
+    margin-right: 0; }
+
+.site-desc {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  margin-right: 0;
+  color: #09835f;
+  font-family: "Melbourne", sans-serif;
+  font-size: 21px;
+  text-align: justify;
+  margin: 0;
+  float: left;
+  padding: 10px 0 0 0px; }
+  .site-desc:last-child {
     margin-right: 0; }
 
 /* Navigation */
@@ -807,7 +828,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
     padding: 0;
     margin: 0; }
   .timeline li {
-    background-color: #cccccc;
+    background-color: #eeeeee;
     margin: 5px 1px 0; }
   .timeline li:nth-child(even) {
     background-color: #777777; }
@@ -909,7 +930,7 @@ a.next:hover {
   float: left;
   margin-right: 2.35765%;
   width: 40.29137%;
-  background-color: #eee;
+  border-right: thin solid #ddd;
   margin-right: 0;
   width: 42.5%; }
   .leftColumn:last-child {
@@ -925,6 +946,15 @@ a.next:hover {
 
 .localInfo, .nationalInfo {
   border-bottom: 0; }
+
+.statInfo {
+  background: url(../img/stats-bg.png) no-repeat;
+  color: #eee; }
+  .statInfo h2 {
+    color: #eee; }
+
+.statistic {
+  font-size: 1.75em; }
 
 /* Content Sidebar */
 .secondary-column {
@@ -960,8 +990,19 @@ a.next:hover {
     height: 300px; }
 
 /* Sponsors */
-.sponsors .container {
-  border: 0; }
+.sponsors {
+  background-color: #eeeeee;
+  padding: 20px 0; }
+  .sponsors .container {
+    border: 0; }
+  .sponsors table {
+    border: none; }
+    .sponsors table th {
+      padding: 0; }
+  .sponsors tr {
+    border: none; }
+  .sponsors td {
+    background-color: transparent; }
 
 /* SIDEBAR */
 .page-sidebar {
@@ -996,11 +1037,6 @@ a.next:hover {
         margin-right: 0; }
       .page-postscript .block:nth-child(4n) {
         margin-right: 0; } }
-
-/* Sponsors -- get a better naming convention... */
-.sponsors {
-  background-color: #cccccc;
-  height: 300px; }
 
 /* FOOTER */
 .site-footer {

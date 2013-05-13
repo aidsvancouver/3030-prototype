@@ -1,5 +1,5 @@
 // 30 30 Timeline 
-(function(){
+(function() {
 
 	var timelineNav = {
 		init: function(config) {
@@ -41,11 +41,7 @@
 		pullTab: $('.pullTab')
 	});
 
-})(); // end
-
-
 // Button Positioning for Pager Navigation 
-(function(){
 	var pager = {
 		init: function(config){
 			this.config = config;
@@ -82,7 +78,7 @@
 
 		scrollFade: function() { // Fade the pager buttons as you scroll down the page
 			var fadeStart = 100, // 100px scroll or less will equiv to 1 opacity
-			    fadeUntil = 2000; // 2000px scroll or more will equiv to 0 opacity
+			    fadeUntil = 1500; // 2000px scroll or more will equiv to 0 opacity
 
 
 			$(window).bind('scroll', function() {
@@ -115,4 +111,34 @@
 		nextBtn: $('.next')
 	});
 
-})(); // end
+// Parallax Scroll Test
+    //save selectors as variables to increase performance
+    var $window = $(window);
+    var bg1 = $(".statInfo");
+
+    var windowHeight = $window.height(); //get the height of the window
+
+    function newPos(x, windowHeight, pos, adjuster, inertia){
+        return x + "px " + (((windowHeight + pos) - adjuster) * inertia)  + "px";
+    }
+
+    //function to be called whenever the window is scrolled or resized
+    function Move(){
+        var pos = $window.scrollTop(); //position of the scrollbar
+
+        bg1.css({'backgroundPosition': newPos(0, windowHeight, pos, 2000, 0.1)});
+    }
+
+    $window.resize(function(){ //if the user resizes the window...
+        if(jQuery(window).width() > 766) {
+            Move(); //move the background images in relation to the movement of the scrollbar
+        }
+    });
+
+    $window.bind('scroll', function(){ //when the user is scrolling...
+        if(jQuery(window).width() > 766) {
+            Move(); //move the background images in relation to the movement of the scrollbar
+        }
+    });
+
+}());

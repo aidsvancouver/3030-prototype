@@ -9,7 +9,7 @@ $primary: #09835f;
 $secondary: #21b684;
 $darkGrey: #333;
 $midGrey: #777;
-$lightGrey: #ccc;
+$lightGrey: #eee;
 
 /* Mixins */
 
@@ -95,6 +95,12 @@ h3 {
     font-weight: 600;
 }
 
+h4 {
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
 blockquote {
     font-family: $rounded;
     font-size: 1.5em;
@@ -167,7 +173,6 @@ hr {
     padding: 0;
 }
 
-
 /* General Layout */
 
 $thinBorder: thin solid #ddd;
@@ -185,7 +190,7 @@ $thinBorder: thin solid #ddd;
     padding: 10px 10px 10px 30px;
     border-bottom: $thinBorder;
     h2 {
-        margin-bottom: 10px;
+        margin: 12px 0 10px 0;
     }
     ul {
         font-family: $rounded;
@@ -296,12 +301,12 @@ label {
 }
 
 .site-name-slogan {
-    @include span-columns(6 of 12);
+    @include span-columns(5 of 12);
     @include hide-text;
     h1 {
         background: url('../img/30-30-logo.png') no-repeat;
         height: 138px;
-        width: 450px;
+        margin-left: 40px;
     }
 }
 
@@ -311,6 +316,18 @@ label {
     background: url('../img/av-logo.png') no-repeat;
     height: 80px;
     width: 112px;
+}
+
+.site-desc {
+    @include span-columns(7 of 12);
+    @include omega();     
+    color: $primary;
+    font-family: $rounded;
+    font-size: 21px;
+    text-align: justify;
+    margin: 0;
+    float: left;
+    padding: 10px 0 0 0px;
 }
 
 /* Navigation */
@@ -444,7 +461,7 @@ a.next:hover {
 
 .leftColumn {
     @include span-columns(5);
-    background-color: #eee;
+    border-right: thin solid #ddd;
     margin-right: 0;
     width: 42.5%;
 }
@@ -455,6 +472,18 @@ a.next:hover {
 
 .localInfo, .nationalInfo {
     border-bottom: 0;
+}
+
+.statInfo {
+    background: url(../img/stats-bg.png) no-repeat;
+    color: #eee;
+    h2 {
+        color: #eee;
+    }
+}
+
+.statistic {
+    font-size: 1.75em;
 }
 
 /* Content Sidebar */
@@ -485,8 +514,22 @@ a.next:hover {
 /* Sponsors */
 
 .sponsors {
+    background-color: $lightGrey;
+    padding: 20px 0;
     .container {
         border: 0;
+    }
+    table {
+        border: none;
+        th {
+            padding: 0;
+        }
+    }
+    tr {
+        border: none;
+    }
+    td {
+        background-color: transparent;
     }
 }
 
@@ -511,13 +554,6 @@ a.next:hover {
         @include span-columns(3);
         @include nth-omega(4n);
     }
-}
-
-/* Sponsors -- get a better naming convention... */
-
-.sponsors {
-    background-color: $lightGrey;
-    height: 300px;
 }
 
 /* FOOTER */
