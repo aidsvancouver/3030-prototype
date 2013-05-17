@@ -1,45 +1,92 @@
-// 30 30 Timeline 
 (function() {
 
-	var timelineNav = {
+// 30 30 Timeline 
+	var timelineSlider = {
 		init: function(config) {
 			this.config = config;
-			this.slideUpAction();
+			var timelineUl = this.config.timeline.find('ul');
+
+			this.setWidth(this, timelineUl); // pass this for reference back
+			this.bind(this, timelineUl);
+			this.affix();			
 		},
 
-		slideUpAction: function() {
-			this.config.pullTab.on('click', function() {
-				timelineNav.config.timeline.slideDown();
-				timelineNav.addPagerPad();
-				timelineNav.slideDownAction();
+		setWidth: function(_this, timelineUl) {
+			var liCount = timelineUl.find('li').length,
+				timelineWidth = 200 * liCount; // Hard coded value for the width of each timeline item (200px)
+			_this.config.timeline.find('ul').css('width', timelineWidth);
+		},
+
+		bind: function(_this, timelineUl) {
+			var count = 1983,
+				hoverItem = timelineUl.find('.timeline-item img');
+
+			// Listen for hover 
+			hoverItem.on('mouseover', function() {
+				$(this).animate({opacity: '.5'}, 300);
+			});
+
+			hoverItem.on('mouseleave', function() {
+				$(this).animate({opacity: '1'}, 300);
+			});
+
+			// Listen for next
+			_this.config.nextBtn.on('click', function(e) {
+				e.preventDefault();
+				var marginOld = parseInt(timelineUl.css('margin-left')),
+					overFlow = _this.config.timeline.width();
+
+				if (marginOld > (-6000 + overFlow)) {	
+					var marginNew = marginOld - 200;
+					timelineUl.animate({marginLeft: marginNew}, 200);
+				} else {
+					timelineUl.css('margin-left', marginOld);
+				}
+			});
+
+			// Listen for prev
+			_this.config.prevBtn.on('click', function(e) {
+				e.preventDefault();
+				var marginOld = parseInt(timelineUl.css('margin-left'));
+				if (marginOld < 0) {	
+					var marginNew = marginOld + 200;
+					timelineUl.animate({marginLeft: marginNew}, 200);
+				} else {
+					timelineUl.css('margin-left', 0); // resetting the margin with a hard coded value (0)
+				}
 			});
 		},
 
-		slideDownAction: function() {
-			timelineNav.config.timeline.on('mouseleave', function(){
-				timelineNav.config.timeline.slideUp();
-				timelineNav.removePagerPad();
-			});
-		},
+		affix: function() {
+			var _window = $(window);
+			_window.on('scroll', function() {
+				var tabPosition = 200, // fix this so it isn't hard coded
+					timeline = $('.timeline'),
+					timelineHeight = timeline.height();
+					scrollHeight = $(document).height(),
+					scrollTop = _window.scrollTop();
+					testDiff = scrollTop - tabPosition;
 
-		addPagerPad: function() {
-			$('.previous, .next').animate({
-				top: '400'
+				// compare the scroll height to the tab offset
+				if (testDiff > 0) {
+					// add "sticky" class when scroll height falls below the offset
+					timeline.addClass("sticky");
+					$('body').css('margin-top', timelineHeight);
+				} else {
+					timeline.removeClass("sticky");
+					$('body').css('margin-top', 0);
+				}
 			});
-		},
-
-		removePagerPad: function() {
-			$('.previous, .next').animate({
-				top: '340'
-			});
-		}
+		}		
 	};
 
 	// initialize the timeline
-	timelineNav.init({
-		timeline: $('.timeline').find('ul').hide(), // Hide the timeline
-		pullTab: $('.pullTab')
+	timelineSlider.init({
+		timeline: $('.timeline'),
+		nextBtn: $('.timeline-next'),
+		prevBtn: $('.timeline-prev')
 	});
+
 
 // Button Positioning for Pager Navigation 
 	var pager = {
@@ -84,7 +131,7 @@
 			$(window).bind('scroll', function() {
 			    var offset = $(document).scrollTop(),
 			        opacity = 0;
-			        newTop = 340 - offset / 4;
+			        newTop = 440 - offset / 5;
 
 			    if (offset <= fadeStart) {
 			        opacity = 1;
