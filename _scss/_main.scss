@@ -296,7 +296,6 @@ label {
     }
     background: url('../img/site-header-bg.jpg') #ddd;
     border-top: 10px solid $primary;
-    border-bottom: 2px solid #ddd;
     padding: 30px 0;
 }
 
@@ -342,34 +341,49 @@ label {
 .timeline {
     background-color: #333;
     border-bottom: 3px solid #000;
+    border-top: 1px solid #bbb;
     width: 100%;
     overflow: hidden;
     position: relative;
     ul {
+        background-color: #ddd;
         margin: 0px;
         padding: 0;
     }
     li {
-        background-color: #eee;
+        border-right: thin solid #bbb;
         display: inline-block;
-        width: 200px;
-        height: 134px;
-        margin: 0;
-        padding: 0;
+        width: 185px;
+        height: 135px;
+        padding: 10px 0 0 7px;
         position: relative;
+    }
+    img {
+        width: 170px;
+        height: 95px;
     }
 }
 
 .timeline-item {
-    background: url(../img/play-hover.png) no-repeat white;
+    cursor: pointer;
+}
+
+.timeline-img {
+    background: url(../img/play-hover.png) no-repeat transparent;
+}
+
+.timeline-title {
+    font-family: $rounded;
+    padding-top: 4px;    
 }
 
 .timeline-prev, .timeline-next {
     width: 50px;
-    height: 134px;
-    background-color: #333;
+    height: 135px;
+    background-color: black;
+    font-family: $rounded;
     color: white;
-    opacity: .5;
+    opacity: .85;
     position: absolute;
     top: 0;
     font-size: 5em;
@@ -377,12 +391,18 @@ label {
     z-index: 999;
 }
 
+.timeline-prev:hover, .timeline-next:hover {
+    color: $primary;
+}
+
 .timeline-prev {
     left: 0;
+    padding: 8px 0 0 12px;
 }
 
 .timeline-next {
     right: 0;
+    padding: 8px 0 0 10px;
 }
 
 .play-hover {

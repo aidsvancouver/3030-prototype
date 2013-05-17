@@ -759,7 +759,6 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
 .site-header {
   background: url("../img/site-header-bg.jpg") #dddddd;
   border-top: 10px solid #09835f;
-  border-bottom: 2px solid #ddd;
   padding: 30px 0; }
   .site-header .container {
     border: 0; }
@@ -823,41 +822,58 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
 .timeline {
   background-color: #333;
   border-bottom: 3px solid #000;
+  border-top: 1px solid #bbb;
   width: 100%;
   overflow: hidden;
   position: relative; }
   .timeline ul {
+    background-color: #ddd;
     margin: 0px;
     padding: 0; }
   .timeline li {
-    background-color: #eee;
+    border-right: thin solid #bbb;
     display: inline-block;
-    width: 200px;
-    height: 134px;
-    margin: 0;
-    padding: 0;
+    width: 185px;
+    height: 135px;
+    padding: 10px 0 0 7px;
     position: relative; }
+  .timeline img {
+    width: 170px;
+    height: 95px; }
 
 .timeline-item {
-  background: url(../img/play-hover.png) no-repeat white; }
+  cursor: pointer; }
+
+.timeline-img {
+  background: url(../img/play-hover.png) no-repeat transparent; }
+
+.timeline-title {
+  font-family: "Melbourne", sans-serif;
+  padding-top: 4px; }
 
 .timeline-prev, .timeline-next {
   width: 50px;
-  height: 134px;
-  background-color: #333;
+  height: 135px;
+  background-color: black;
+  font-family: "Melbourne", sans-serif;
   color: white;
-  opacity: .5;
+  opacity: .85;
   position: absolute;
   top: 0;
   font-size: 5em;
   text-decoration: none;
   z-index: 999; }
 
+.timeline-prev:hover, .timeline-next:hover {
+  color: #09835f; }
+
 .timeline-prev {
-  left: 0; }
+  left: 0;
+  padding: 8px 0 0 12px; }
 
 .timeline-next {
-  right: 0; }
+  right: 0;
+  padding: 8px 0 0 10px; }
 
 .play-hover {
   position: absolute;
