@@ -296,7 +296,7 @@ label {
     }
     background: url('../img/site-header-bg.jpg') #ddd;
     border-top: 10px solid $primary;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #ddd;
     padding: 30px 0;
 }
 
@@ -340,43 +340,64 @@ label {
 /* Timeline */
 
 .timeline {
-    background-color: #eee;
+    background-color: #333;
+    border-bottom: 3px solid #000;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
     ul {
-        width: 100%;
-        list-style: none;
+        margin: 0px;
         padding: 0;
-        margin: 0;
     }
     li {
-        background-color: $lightGrey;
-        margin: 5px 1px 0;
-    }
-    li:nth-child(even) {
-        background-color: $midGrey;
-    }
-    li:hover {
-        background-color: $darkGrey;
-    }    
-}
-
-.pullTab {
-    width: 100%;
-}
-
-.timeline-entry {
-    @include inline-block;
-    width: 2.9%;
-    height: 100px;
-    text-align: center;
-    a {
-        display: block;
-        margin-top: 40px;
+        background-color: #eee;
+        display: inline-block;
+        width: 200px;
+        height: 134px;
+        margin: 0;
+        padding: 0;
+        position: relative;
     }
 }
 
-.timeline-entry.active {
-    background-color: black;
+.timeline-item {
+    background: url(../img/play-hover.png) no-repeat white;
 }
+
+.timeline-prev, .timeline-next {
+    width: 50px;
+    height: 134px;
+    background-color: #333;
+    color: white;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    font-size: 5em;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.timeline-prev {
+    left: 0;
+}
+
+.timeline-next {
+    right: 0;
+}
+
+.play-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    border-top: 0;
+    border-bottom: 3px solid #333;
+}
+
 
 /* FRONT PAGE */
 
@@ -404,7 +425,7 @@ a.next:hover {
     position: fixed;
     width: 169px;
     height: 339px;
-    top: 340px;
+    top: 440px;
     div {
         margin-top: 135px;
     }
@@ -441,7 +462,8 @@ a.next:hover {
 }
 
 .video-player {
-    border: 2px solid #333;
+    border-right: 2px solid #333;
+    border-left: 2px solid #333;
     margin-left: 30px;
 }
 
