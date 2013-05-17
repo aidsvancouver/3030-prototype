@@ -9,6 +9,7 @@
 			this.setWidth(this, timelineUl); // pass this for reference back
 			this.bind(this, timelineUl);
 			this.affix();			
+			this.currentSelection();
 		},
 
 		setWidth: function(_this, timelineUl) {
@@ -23,11 +24,11 @@
 
 			// Listen for hover 
 			hoverItem.on('mouseover', function() {
-				$(this).animate({opacity: '.5'}, 300);
+				$(this).animate({opacity: '.25'}, 200);
 			});
 
 			hoverItem.on('mouseleave', function() {
-				$(this).animate({opacity: '1'}, 300);
+				$(this).animate({opacity: '1'}, 50);
 			});
 
 			// Listen for next
@@ -77,14 +78,23 @@
 					$('body').css('margin-top', 0);
 				}
 			});
-		}		
+		},
+
+		// Highlight the current page in the timeline
+		currentSelection: function () {
+			$('li.' + timelineSlider.config.pageTitle.html()).css({
+				backgroundColor: '#333',
+				color: 'white'
+			});
+		}	
 	};
 
 	// initialize the timeline
 	timelineSlider.init({
 		timeline: $('.timeline'),
 		nextBtn: $('.timeline-next'),
-		prevBtn: $('.timeline-prev')
+		prevBtn: $('.timeline-prev'),
+		pageTitle: $('.page-title')
 	});
 
 

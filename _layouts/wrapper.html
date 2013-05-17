@@ -35,9 +35,11 @@
             </div>
         </header>
 
+        {% if page.timeline %}
         <section class="timeline">
             {% include timeline.html %}
         </section>
+        {% endif %}
 
         <section class="page-content">
             {{ content }}
