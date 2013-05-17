@@ -845,7 +845,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   cursor: pointer; }
 
 .timeline-img {
-  background: url(../img/play-hover.png) no-repeat transparent; }
+  background: url(../img/play-hover.png) no-repeat #666666;
+  width: 170px; }
 
 .timeline-title {
   font-family: "Melbourne", sans-serif;
