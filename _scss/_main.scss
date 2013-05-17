@@ -382,7 +382,39 @@ label {
 
 .teaser {
     @include span-columns(3);
-    @include omega(4n);
+    background-color: #eee;
+    margin-bottom: 20px;
+    min-height: 200px;
+}
+
+.teaser:nth-child(4n) {
+    margin-right: 0;
+}
+
+.calendar-title {
+    font-family: $rounded;
+    font-size: 4.5em;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+a .calendar-title, a .calendar-title:link, a .calendar-title:visited {
+    color: #bbb;
+}
+
+a .calendar-title:hover {
+    color: #333;
+}
+
+.post-teaser {
+    @include span-columns (6);
+    @include omega();
+    background-color: $primary;
+    color: #eee;
+    font-family: $rounded;
+    font-size: 2em;
+    height: 200px;
+    padding: 0px 30px;
 }
 
 /* PAGINATION */

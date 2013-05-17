@@ -5,6 +5,9 @@ sidebar: false
 ---
 {% for post in site.posts reversed %}
     <article class="teaser">
-        <a href="/3030-prototype{{ post.url }}"><h1>{{ post.abbr }}</h1></a>
+        <a href="/3030-prototype{{ post.url }}"><div class="calendar-title">{{ post.abbr }}</div></a>
     </article>
 {% endfor %}
+<article class="post-teaser">
+    <p>Something about 30-30 goes here. Maybe two lines, who knows?</p>
+</article>

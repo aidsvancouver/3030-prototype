@@ -860,8 +860,40 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   float: left;
   margin-right: 2.35765%;
   width: 23.23176%;
-  margin-right: 0; }
+  background-color: #eee;
+  margin-bottom: 20px;
+  min-height: 200px; }
   .teaser:last-child {
+    margin-right: 0; }
+
+.teaser:nth-child(4n) {
+  margin-right: 0; }
+
+.calendar-title {
+  font-family: "Melbourne", sans-serif;
+  font-size: 4.5em;
+  font-weight: bold;
+  padding-left: 20px; }
+
+a .calendar-title, a .calendar-title:link, a .calendar-title:visited {
+  color: #bbb; }
+
+a .calendar-title:hover {
+  color: #333; }
+
+.post-teaser {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+  background-color: #09835f;
+  color: #eee;
+  font-family: "Melbourne", sans-serif;
+  font-size: 2em;
+  height: 200px;
+  padding: 0px 30px; }
+  .post-teaser:last-child {
     margin-right: 0; }
 
 /* PAGINATION */
