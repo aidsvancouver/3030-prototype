@@ -48,14 +48,20 @@
 			// Listen for prev
 			_this.config.prevBtn.on('click', function(e) {
 				e.preventDefault();
-				var marginOld = parseInt(timelineUl.css('margin-left'));
+				var marginOld = parseInt(timelineUl.css('margin-left')),
+					overFlow = _this.config.timeline.width();
 
 				if (marginOld < 0) {	
 					var marginNew = marginOld + 185;
 					timelineUl.animate({marginLeft: marginNew}, 500);
 				} else {
 					timelineUl.css('margin-left', 0); // resetting the margin with a hard coded value (0)
-				}		
+				};
+				
+				if (marginOld > -4500) {
+					console.log('test marginOld: ' + marginOld);
+					timelineSlider.config.msg.fadeOut();
+				};
 			});
 		},
 
