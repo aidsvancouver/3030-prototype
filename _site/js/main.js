@@ -8,53 +8,54 @@
 
 			this.setWidth(this, timelineUl); // pass this for reference back
 			this.bind(this, timelineUl);
-			this.affix();			
-			this.currentSelection();
+			//this.affix();			
+			this.currentSelection(timelineUl);
 		},
 
 		setWidth: function(_this, timelineUl) {
 			var liCount = timelineUl.find('li').length,
-				timelineWidth = 200 * liCount; // Hard coded value for the width of each timeline item (200px)
+				timelineWidth = 185 * liCount; // Hard coded value for the width of each timeline item (200px)
 			_this.config.timeline.find('ul').css('width', timelineWidth);
 		},
 
 		bind: function(_this, timelineUl) {
 			var count = 1983,
-				hoverItem = timelineUl.find('.timeline-item img');
+				hoverItem = timelineUl.find('.timeline-item');
 
-			// Listen for hover 
+			// Listen for hover
 			hoverItem.on('mouseover', function() {
-				$(this).animate({opacity: '.25'}, 200);
+				$(this).find('img').animate({opacity: '.25'}, 200);
 			});
 
 			hoverItem.on('mouseleave', function() {
-				$(this).animate({opacity: '1'}, 50);
+				$(this).find('img').animate({opacity: '1'}, 20);
 			});
 
 			// Listen for next
 			_this.config.nextBtn.on('click', function(e) {
 				e.preventDefault();
-				var marginOld = parseInt(timelineUl.css('margin-left')),
+				var marginOld = parseInt(timelineUl.css('margin-left')), // Grab the current left marging to modify
 					overFlow = _this.config.timeline.width();
 
-				if (marginOld > (-6000 + overFlow)) {	
-					var marginNew = marginOld - 200;
-					timelineUl.animate({marginLeft: marginNew}, 200);
+				if (marginOld > (-5550 + overFlow)) { // hardcoded value for width measure -- needs to match var timelineWidth
+					var marginNew = marginOld - 185;
+					timelineUl.animate({marginLeft: marginNew}, 500); // Move the margin forward
 				} else {
-					timelineUl.css('margin-left', marginOld);
-				}
+					timelineUl.css('margin-left', marginOld); // If we're at the end, leave the margin alone
+				};
 			});
 
 			// Listen for prev
 			_this.config.prevBtn.on('click', function(e) {
 				e.preventDefault();
 				var marginOld = parseInt(timelineUl.css('margin-left'));
+
 				if (marginOld < 0) {	
-					var marginNew = marginOld + 200;
-					timelineUl.animate({marginLeft: marginNew}, 200);
+					var marginNew = marginOld + 185;
+					timelineUl.animate({marginLeft: marginNew}, 500);
 				} else {
 					timelineUl.css('margin-left', 0); // resetting the margin with a hard coded value (0)
-				}
+				}		
 			});
 		},
 
@@ -81,11 +82,11 @@
 		},
 
 		// Highlight the current page in the timeline
-		currentSelection: function () {
-			$('li.' + timelineSlider.config.pageTitle.html()).css({
-				backgroundColor: '#333',
-				color: 'white'
-			});
+		currentSelection: function (timelineUl) {
+			var currentYear = $('li.' + timelineSlider.config.pageTitle).addClass('active'),
+				yearCounter = ( parseInt(timelineSlider.config.pageTitle) - 1983 ) * -185;
+
+			timelineUl.css('margin-left', yearCounter);
 		}	
 	};
 
@@ -94,7 +95,8 @@
 		timeline: $('.timeline'),
 		nextBtn: $('.timeline-next'),
 		prevBtn: $('.timeline-prev'),
-		pageTitle: $('.page-title')
+		pageTitle: $('.page-title').html(),
+		msg: $('.timeline-msg')
 	});
 
 
