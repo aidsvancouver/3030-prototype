@@ -343,24 +343,39 @@ label {
     border-bottom: 3px solid #000;
     border-top: 1px solid #bbb;
     width: 100%;
+    height: 135px;
     overflow: hidden;
     position: relative;
+    padding-left: 50px;
     ul {
-        background-color: #ddd;
         margin: 0px;
-        padding: 0;
+        padding: 0px;
     }
     li {
+        background-color: #ddd;
         border-right: thin solid #bbb;
         display: inline-block;
         width: 185px;
         height: 135px;
         padding: 10px 0 0 7px;
         position: relative;
+        z-index: 2;
     }
     img {
         width: 170px;
         height: 95px;
+    }
+    .active {
+        background-color: #333;
+        .timeline-title {
+            color: #ddd;
+        }
+    }
+    a, a:visited {
+        color: $darkGrey;
+    }
+    a:hover {
+        color: $primary;
     }
 }
 
@@ -375,7 +390,7 @@ label {
 
 .timeline-title {
     font-family: $rounded;
-    padding-top: 4px;    
+    padding-top: 4px;
 }
 
 .timeline-prev, .timeline-next {
@@ -404,6 +419,16 @@ label {
 .timeline-next {
     right: 0;
     padding: 8px 0 0 10px;
+}
+
+.timeline-msg {
+    color: #999;
+    font-family: $rounded;
+    font-size: 2em;
+    position: absolute;
+    right: 150px;
+    top: 75px;
+    z-index: 1;
 }
 
 .play-hover {
@@ -534,15 +559,15 @@ a.next:hover {
     border-top: $thinBorder;
 }
 
-.leftColumn {
+.rightColumn {
     @include span-columns(5);
-    border-right: thin solid #ddd;
-    margin-right: 0;
+    border-left: thin solid #ddd;
     width: 42.5%;
 }
 
-.rightColumn {
+.leftColumn {
     @include span-columns(7);
+    margin-right: 0;
 }
 
 .localInfo, .nationalInfo {
@@ -589,19 +614,24 @@ a.next:hover {
 /* Sponsors */
 
 .sponsors {
-    background-color: $lightGrey;
-    padding: 20px 0;
+    background-color: white;
+    padding-bottom: 0;
     .container {
         border: 0;
     }
     table {
         border: none;
+        border-left: thin solid #ddd;
+        border-right: thin solid #ddd;
         th {
             padding: 0;
         }
     }
     tr {
         border: none;
+    }
+    tr:nth-child(even) {
+        background-color: white;
     }
     td {
         background-color: transparent;

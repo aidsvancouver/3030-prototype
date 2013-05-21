@@ -824,22 +824,33 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   border-bottom: 3px solid #000;
   border-top: 1px solid #bbb;
   width: 100%;
+  height: 135px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  padding-left: 50px; }
   .timeline ul {
-    background-color: #ddd;
     margin: 0px;
-    padding: 0; }
+    padding: 0px; }
   .timeline li {
+    background-color: #ddd;
     border-right: thin solid #bbb;
     display: inline-block;
     width: 185px;
     height: 135px;
     padding: 10px 0 0 7px;
-    position: relative; }
+    position: relative;
+    z-index: 2; }
   .timeline img {
     width: 170px;
     height: 95px; }
+  .timeline .active {
+    background-color: #333; }
+    .timeline .active .timeline-title {
+      color: #ddd; }
+  .timeline a, .timeline a:visited {
+    color: #333333; }
+  .timeline a:hover {
+    color: #09835f; }
 
 .timeline-item {
   cursor: pointer; }
@@ -875,6 +886,15 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
 .timeline-next {
   right: 0;
   padding: 8px 0 0 10px; }
+
+.timeline-msg {
+  color: #999;
+  font-family: "Melbourne", sans-serif;
+  font-size: 2em;
+  position: absolute;
+  right: 150px;
+  top: 75px;
+  z-index: 1; }
 
 .play-hover {
   position: absolute;
@@ -991,23 +1011,23 @@ a.next:hover {
 .article-body {
   border-top: thin solid #dddddd; }
 
-.leftColumn {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-  border-right: thin solid #ddd;
-  margin-right: 0;
-  width: 42.5%; }
-  .leftColumn:last-child {
-    margin-right: 0; }
-
 .rightColumn {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 57.35098%; }
+  width: 40.29137%;
+  border-left: thin solid #ddd;
+  width: 42.5%; }
   .rightColumn:last-child {
+    margin-right: 0; }
+
+.leftColumn {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  margin-right: 0; }
+  .leftColumn:last-child {
     margin-right: 0; }
 
 .localInfo, .nationalInfo {
@@ -1057,16 +1077,20 @@ a.next:hover {
 
 /* Sponsors */
 .sponsors {
-  background-color: #eeeeee;
-  padding: 20px 0; }
+  background-color: white;
+  padding-bottom: 0; }
   .sponsors .container {
     border: 0; }
   .sponsors table {
-    border: none; }
+    border: none;
+    border-left: thin solid #ddd;
+    border-right: thin solid #ddd; }
     .sponsors table th {
       padding: 0; }
   .sponsors tr {
     border: none; }
+  .sponsors tr:nth-child(even) {
+    background-color: white; }
   .sponsors td {
     background-color: transparent; }
 
