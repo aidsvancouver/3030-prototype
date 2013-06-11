@@ -148,23 +148,30 @@
 
 			$(window).bind('scroll', function() {
 			    var offset = $(document).scrollTop(),
-			        opacity = 0;
-			        newTop = 440 - offset / 5;
+			        opacity = 0,
+			        newTop = 320 - offset / 5,
+			        colorChangeHeight = 885;
+
+			    if (offset >= colorChangeHeight) {
+			    	
+			    };
 
 			    if (offset <= fadeStart) {
 			        opacity = 1;
 			    } else if (offset <= fadeUntil) {
 			        opacity = 1 - offset / fadeUntil;
-			    }
+			    };
 
 			    pager.config.previousBtn.css({
-			    	opacity: opacity,
 			    	top: newTop
+			    }).find('.pager-bg').css({
+			    	opacity: opacity
 			    });
 
 			    pager.config.nextBtn.css({
-			    	opacity: opacity,
 			    	top: newTop
+			    }).find('.pager-bg').css({
+			    	opacity: opacity
 			    });
 			});			
 		},
@@ -177,11 +184,11 @@
 	});
 
 // Parallax Scroll Test
-    //save selectors as variables to increase performance
+    // save selectors as variables to increase performance
     var $window = $(window);
     var bg1 = $(".statInfo");
 
-    var windowHeight = $window.height(); //get the height of the window
+    var windowHeight = $window.height(); // get the height of the window
 
     function newPos(x, windowHeight, pos, adjuster, inertia){
         return x + "px " + (((windowHeight + pos) - adjuster) * inertia)  + "px";
@@ -205,5 +212,38 @@
             Move(); //move the background images in relation to the movement of the scrollbar
         }
     });
+
+// Teaser roll over
+
+	var teaserRollOver = {
+		init: function(config) {
+			this.config = config;
+			this.lastColAddClass();
+			this.bind();
+		},
+
+		bind: function() {
+			teaserRollOver.config.teaser.on('mouseenter', function() {
+				$(this).find('.teaser-txt').fadeIn(150);
+			}).on('mouseleave', function() {
+				$(this).find('.teaser-txt').fadeOut(150);
+			});
+
+			// Hides the teaser text, and also ensures that when you hover over the text it hides.
+			teaserRollOver.config.teaser.find('.teaser-txt').hide().on('mouseenter', function() {
+				$(this).hide();
+			});
+		},
+
+		// add a class to the last column in each row
+		lastColAddClass: function() {
+			teaserRollOver.config.lastColChild.find('.teaser-txt').addClass('last');
+		}
+	};
+
+	teaserRollOver.init({
+		teaser: $('.teaser'),
+		lastColChild: $('.teaser:nth-child(4n)')
+	});
 
 }());

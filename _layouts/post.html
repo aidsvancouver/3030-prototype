@@ -3,7 +3,8 @@ layout: wrapper
 ---
 {% if page.previous.url %}
 <a href="/3030-prototype{{ page.previous.url }}" title="Previous Year: {{ page.previous.title }}" class="previous">
-	<div>{{ page.previous.title }}</div>
+	<div class="pager-bg"></div>
+	<div class="pager-txt">{{ page.previous.title }}</div>
 </a>
 {% endif %}
 
@@ -81,6 +82,7 @@ layout: wrapper
 
 {% if page.next.url %}
 <a href="/3030-prototype{{ page.next.url }}" title="Next Year: {{ page.next.title }}" class="next">
-	<div>{{ page.next.title }}</div>
+	<div class="pager-bg"></div>
+	<div class="pager-txt">{{ page.next.title }}</div>
 </a>
 {% endif %}

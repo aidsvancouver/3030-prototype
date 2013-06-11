@@ -82,12 +82,17 @@ h1.page-title {
     text-align: center;
 }
 
-h2.page-subtitle {
+h2.page-subtitle, h2.page-heading {
     background-color: #333;
     color: $lightGrey;
     margin: 0 0 10px 0;
     padding: 20px 150px;
     text-align: center;
+}
+
+h2.page-heading {
+    border-top: 10px solid #ddd;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -445,13 +450,76 @@ label {
 }
 
 
-/* FRONT PAGE */
+/* FRONT PAGE / LANDING */
+
+.landing-template .container {
+    border: 0;
+}
+
+.latest, .actions {
+    min-height: 420px;
+    margin-bottom: 20px;
+}
+
+.latest {
+    @include span-columns(6 of 12);
+}
+
+.actions {
+    @include span-columns(6 of 12);
+    @include omega();
+    background-color: #eee;
+}
+
+.signup {
+    @include span-columns(6 of 6);
+    @include omega();
+}
+
+.donate {
+    @include span-columns(6 of 6);
+    @include omega();
+}
 
 .teaser {
     @include span-columns(3);
     background-color: #eee;
     margin-bottom: 20px;
-    min-height: 200px;
+    min-height: 131px;
+    position: relative;
+}
+
+.teaser-title {
+    margin-bottom: 10px;
+}
+
+.teaser-img {
+    display: block;
+    height: 131px;
+    position: relative;
+    width: 235px;
+    z-index: 2;
+}
+
+.teaser-img:hover {
+    background-position: 0 -131px;
+}
+
+.teaser-txt {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 240px;
+    padding: 10px 10px 30px 20px;
+    width: 265px;
+    z-index: 999;
+    p {
+        margin: 0;
+    }
+}
+
+.last {
+    left: -265px;
 }
 
 .teaser:nth-child(4n) {
@@ -479,8 +547,8 @@ a .calendar-title:hover {
     background-color: $primary;
     color: #eee;
     font-family: $rounded;
-    font-size: 2em;
-    height: 200px;
+    font-size: 1.75em;
+    height: 131px;
     padding: 0px 30px;
 }
 
@@ -488,37 +556,54 @@ a .calendar-title:hover {
 
 a.previous, a.previous:link, a.previous:visited,
 a.next, a.next:link, a.next:visited {
-    color: #444;
+    color: #888;
 }
 
 a.previous:hover,
 a.next:hover {
-    color: #999;
+    color: #bbb;
 }
 
 .previous, .next {
-    background: url('../img/arrows.png') no-repeat transparent;
     font-family: $rounded;
     font-size: 3em;
     position: fixed;
     width: 169px;
     height: 339px;
-    top: 440px;
-    div {
+    top: 320px;
+    .pager-txt {
         margin-top: 135px;
     }
 }
 
 .previous {
-    left: 0px;
-    div {
+    .pager-bg {
+        background: url('../img/arrows.png') no-repeat transparent;
+        width: 169px;
+        height: 339px;
+        position: absolute;
+        left: 0;
+    }
+    .pager-txt {
         margin-left: 60px;
-    }}
+    }
+}
+
+.pager-txt {
+    position: absolute;
+    top: 0;
+}
 
 .next {
-    background-position: -169px 0;
-    right: 0px;
-    div {
+    .pager-bg {
+        background: url('../img/arrows.png') no-repeat transparent;
+        background-position: -169px 0;
+        right: 0px;
+        width: 169px;
+        height: 339px;
+        position: absolute;
+    }    
+    .pager-txt {
         margin-left: 20px;
     }
 }
@@ -559,6 +644,11 @@ a.next:hover {
     border-top: $thinBorder;
 }
 
+.landing-template .article-body {
+    border: 0;
+    margin-top: 10px;
+}
+
 .rightColumn {
     @include span-columns(5);
     border-left: thin solid #ddd;
@@ -574,12 +664,25 @@ a.next:hover {
     border-bottom: 0;
 }
 
+.localInfo {
+    background: url(../img/local-bg.png) no-repeat bottom left;
+    min-height: 576px;
+}
+
 .statInfo {
     background: url(../img/stats-bg.png) no-repeat;
     color: #eee;
     h2 {
         color: #eee;
     }
+}
+
+.nationalInfo {
+    background: url(../img/national-bg.png) no-repeat center left;
+}
+
+.globalInfo {
+    background: url(../img/global-bg.png) no-repeat bottom right;
 }
 
 .statistic {
@@ -621,8 +724,6 @@ a.next:hover {
     }
     table {
         border: none;
-        border-left: thin solid #ddd;
-        border-right: thin solid #ddd;
         th {
             padding: 0;
         }
@@ -635,6 +736,7 @@ a.next:hover {
     }
     td {
         background-color: transparent;
+        text-align: center;
     }
 }
 
@@ -664,11 +766,32 @@ a.next:hover {
 /* FOOTER */
 
 .site-footer {
-    font-size: .9em;
+    font-size: 1.25em;
+    font-family: $rounded;
     background: $primary;
     color: white;
+    margin-top: 20px;
     .container {
         padding: 20px;
         border-color: transparent;
     }
+}
+
+.av-logo {
+    @include span-columns(2);
+    @include hide-text;
+    background: url(../img/av-logo.png) no-repeat transparent;
+    height: 116px;
+}
+
+.footer-msg {
+    @include span-columns(10);
+    @include omega();
+    margin-top: 0;
+}
+
+.copyright {
+    @include span-columns(10);
+    @include shift(2);
+    @include omega();
 }

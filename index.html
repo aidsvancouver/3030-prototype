@@ -3,11 +3,40 @@ layout: landing
 title: 30 Days, 30 Stories
 timeline: false
 ---
-{% for post in site.posts reversed %}
-    <article class="teaser">
-        <a href="/3030-prototype{{ post.url }}"><div class="calendar-title">{{ post.abbr }}</div></a>
+    <article class="latest">
+        <a href="#">
+            <img src="/3030-prototype/img/latest-1.jpg">
+            <img src="/3030-prototype/img/latest-btn.jpg">
+        </a>
     </article>
-{% endfor %}
-<article class="post-teaser">
-    <p>Something about 30-30 goes here. Maybe two lines, who knows?</p>
-</article>
+
+<section class="actions">
+    <article class="signup">
+        <a href="">
+            <img src="/3030-prototype/img/signup.png">
+        </a>
+    </article>
+    <article class="donate">
+        <a href="">
+            <img src="/3030-prototype/img/donate.png">
+        </a>
+    </article>
+</section>
+
+<section class="teasers">
+    {% for post in site.posts reversed %}
+        <article class="teaser">
+            <a href="/3030-prototype{{ post.url }}" class="teaser-img" style="background-image: url(/3030-prototype/img/{{ post.teaserImg }});">
+                <div class="calendar-title"></div>
+            </a>
+            <div class="teaser-txt">
+                <h2 class="teaser-title">{{ post.title }}</h2>
+                <small>{{ post.teaserText }}</small><br><br>
+                <img src="/3030-prototype/img/small-arrow.png">
+            </div>
+        </article>
+    {% endfor %}
+    <article class="post-teaser">
+        <p>Something about 30-30 goes here. Maybe two lines, who knows?</p>
+    </article>
+</section>
