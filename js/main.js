@@ -143,7 +143,7 @@
 
 		scrollFade: function() { // Fade the pager buttons as you scroll down the page
 			var fadeStart = 100, // 100px scroll or less will equiv to 1 opacity
-			    fadeUntil = 1500; // 2000px scroll or more will equiv to 0 opacity
+			    fadeUntil = 1500; // 1500px scroll or more will equiv to 0 opacity
 
 
 			$(window).bind('scroll', function() {
@@ -244,6 +244,31 @@
 	teaserRollOver.init({
 		teaser: $('.teaser'),
 		lastColChild: $('.teaser:nth-child(4n)')
+	});
+
+// Equalize the column height
+
+	var columnHeight = {
+		init: function(config) {
+			var leftHeight = config.leftCol.height(),
+				rightHeight = config.rightCol.height(),
+				localHeight = config.leftCol.find('.localInfo'),
+				diff = rightHeight - leftHeight + 20;
+
+			console.log('test: ' + leftHeight + "  " + rightHeight + " " + diff + " -- " + localHeight.height());
+
+			if (diff > 0) {
+				var newHeight = diff + localHeight.height()
+				localHeight.css('height', newHeight);
+
+				console.log('test: ' + newHeight);
+			};
+		}
+	};
+
+	columnHeight.init({
+		leftCol: $('.leftColumn'),
+		rightCol: $('.rightColumn'),
 	});
 
 }());

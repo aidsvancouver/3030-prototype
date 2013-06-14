@@ -192,7 +192,7 @@ $thinBorder: thin solid #ddd;
 }
 
 .info-box {
-    padding: 10px 10px 10px 30px;
+    padding: 10px 30px 10px 30px;
     border-bottom: $thinBorder;
     h2 {
         margin: 12px 0 10px 0;
@@ -218,15 +218,59 @@ $thinBorder: thin solid #ddd;
 
 a {
     text-decoration: none;
-    color: #FF6666;
+    color: $primary;
 }
 
 a:hover {
-    color: #CC0000;
+    color: $darkGrey;
 }
 
 a:visited {
-    color: #FF0066;
+    color: $primary;
+}
+
+.ext-webpage, .ext-pdf, .ext-image, .ext-video {
+    @include hide-text;
+    @include inline-block;
+    background: url(../img/ext-icons.png) no-repeat transparent;
+    margin-top: -4px;
+    opacity: .75;
+    width: 32px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.ext-image {
+    margin-top: 0;
+}
+
+.ext-pdf {
+    background-position: 0 -25px;
+}
+
+.ext-video {
+    background-position: 0 -50px;
+}
+
+.ext-webpage {
+    background-position: 0 -75px;
+}
+
+footer {
+    a {
+        text-decoration: none;
+        color: white;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: $lightGrey;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: white;
+    }
 }
 
 /* BUTTONS, FORMS, TABLES, ETC **/
@@ -320,6 +364,7 @@ label {
     background: url('../img/av-logo.png') no-repeat;
     height: 80px;
     width: 112px;
+    margin-top: 30px;
 }
 
 .site-desc {
@@ -665,20 +710,26 @@ a.next:hover {
 }
 
 .localInfo {
-    background: url(../img/local-bg.png) no-repeat bottom left;
+    background: url(../img/local-bg.png) no-repeat bottom center;
     min-height: 576px;
 }
 
 .statInfo {
+    @include clearfix;
     background: url(../img/stats-bg.png) no-repeat;
     color: #eee;
     h2 {
         color: #eee;
+        margin-bottom: 20px;
+    }
+    li {
+        @include clearfix;
+        margin-bottom: 20px;
     }
 }
 
 .nationalInfo {
-    background: url(../img/national-bg.png) no-repeat center left;
+    background: url(../img/national-bg.png) no-repeat bottom center;
 }
 
 .globalInfo {
@@ -686,7 +737,18 @@ a.next:hover {
 }
 
 .statistic {
-    font-size: 1.75em;
+    float: left;
+    font-size: 2.25em;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+    width: 50px;
+}
+
+.statistic-desc {
+    float: left;
+    max-width: 300px;
+    padding-top: 7px;
 }
 
 /* Content Sidebar */

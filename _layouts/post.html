@@ -32,7 +32,16 @@ layout: wrapper
 					<h2>In {{ page.title }}</h2>
 					<ul>
 						{% for item in page.year %}
-						<li>{{ item.item }}</li>
+						<li>
+							{% if item.link %}
+							<a href="{{ item.link }}" {% if item.type == "image" %} rel="lightbox" title="{{ item.item }}"{% else %} target="_blank" {% endif %}>
+								{{ item.item }}
+								<span class="ext-{{ item.type}}"> LINK</span>
+							</a>
+							{% else %}
+							{{ item.item }}
+							{% endif %}
+						</li>
 						{% endfor %}		
 					</ul>
 				</div>
@@ -41,7 +50,16 @@ layout: wrapper
 					<h2>Local</h2>
 					<ul>
 						{% for item in page.local %}
-						<li>{{ item.item }}</li>
+						<li>
+							{% if item.link %}
+							<a href="{{ item.link }}" {% if item.type == "image" %} rel="lightbox" title="{{ item.item }}"{% else %} target="_blank" {% endif %}>
+								{{ item.item }}
+								<span class="ext-{{ item.type}}"> LINK</span>
+							</a>
+							{% else %}
+							{{ item.item }}
+							{% endif %}
+						</li>
 						{% endfor %}		
 					</ul>
 				</div>		
@@ -52,7 +70,10 @@ layout: wrapper
 					<h2>Statistics</h2>
 					<ul>
 						{% for item in page.statistics %}
-						<li><span class="statistic">{{ item.stat }}</span> {{ item.desc }}</li>
+						<li>
+							<div class="statistic">{{ item.stat }}</div>
+							<div class="statistic-desc">{{ item.desc }}</div>
+						</li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -61,7 +82,16 @@ layout: wrapper
 					<h2>Global</h2>
 					<ul>
 						{% for item in page.global %}
-						<li>{{ item.item }}</li>
+						<li>
+							{% if item.link %}
+							<a href="{{ item.link }}" {% if item.type == "image" %} rel="lightbox" title="{{ item.item }}"{% else %} target="_blank" {% endif %}>
+								{{ item.item }}
+								<span class="ext-{{ item.type}}"> LINK</span>
+							</a>
+							{% else %}
+							{{ item.item }}
+							{% endif %}
+						</li>
 						{% endfor %}	
 					</ul>
 				</div>	
@@ -70,7 +100,16 @@ layout: wrapper
 					<h2>National</h2>
 					<ul>
 						{% for item in page.national %}
-						<li>{{ item.item }}</li>
+						<li>
+							{% if item.link %}
+							<a href="{{ item.link }}" {% if item.type == "image" %} rel="lightbox" title="{{ item.item }}"{% else %} target="_blank" {% endif %}>
+								{{ item.item }}
+								<span class="ext-{{ item.type}}"> LINK</span>
+							</a>
+							{% else %}
+							{{ item.item }}
+							{% endif %}
+						</li>
 						{% endfor %}	
 					</ul>
 				</div>	
