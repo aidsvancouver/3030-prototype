@@ -8,36 +8,55 @@ media: "/media"
 prose:
   metadata:
     _posts:
-      - name: "stat"
-        field:
-          element: "number"
-          label: "Stat/Number"
-      - name: "desc"
-        field:
-          element: "text"
-          label: "Item Text"
-          value: "default"
-      - name: "link"
-        field:
-          element: "text"
-          label: "link"
-          value: "default"
-      - name: "type"
+      - name: "layout"
         field:
           element: "select"
-          label: "Link Type"
-          placeholder: "Select and Item"
+          label: "Layout"
           options:
-            - name: "Image"
-              value: "Image"
-            - name: "PDF"
-              value: "pdf"
-            - name: "Video"
-              value: "video"
-            - name: "Webpage"
-              value: "webpage"
-      - name: "item"
+            - name: "post"
+              value: "post"
+      - name: "title"
         field:
           element: "text"
-          label: "Item Text"
+          label: "Year"
           value: "default"
+      - name: "published"
+        field:
+          element: "select"
+          label: "Publish"
+          placeholder: "Publish this item"
+          options:
+            - name: "True"
+              value: "true"
+            - name: "false"
+              value: "false"
+      - name: "timeline"
+        field:
+          element: "select"
+          label: "Timeline Display"
+          placeholder: "Choose to display the timeline or not"
+          options:
+            - name: "Yes"
+              value: "true"
+            - name: "No"
+              value: "false"
+      - name: "teaserText"
+        field:
+          element: "text"
+          label: "Teaser Text"
+          value: "default"
+      - name: "subtitle"
+        field:
+            element: "text"
+            label: "Subtitle"
+            value: "default"
+      - name: "video"
+        field:
+            element: "text"
+            label: "Video Link"
+            value: "default"
+      - name: "teaserImg"
+        field:
+            element: "text"
+            label: "Teaser Image"
+            value: "default"
