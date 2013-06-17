@@ -260,8 +260,6 @@
 			if (diff > 0) {
 				var newHeight = diff + localHeight.height()
 				localHeight.css('height', newHeight);
-
-				console.log('test: ' + newHeight);
 			};
 		}
 	};

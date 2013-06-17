@@ -1043,8 +1043,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   float: left;
   margin-right: 2.35765%;
   width: 48.82117%;
-  margin-right: 0;
-  background-color: #eee; }
+  margin-right: 0; }
   .actions:last-child {
     margin-right: 0; }
 
@@ -1053,7 +1052,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   float: left;
   margin-right: 4.82916%;
   width: 100%;
-  margin-right: 0; }
+  margin-right: 0;
+  background-color: #09835f; }
   .signup:last-child {
     margin-right: 0; }
 
@@ -1062,8 +1062,19 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   float: left;
   margin-right: 4.82916%;
   width: 100%;
-  margin-right: 0; }
+  margin-right: 0;
+  background-color: #333333; }
   .donate:last-child {
+    margin-right: 0; }
+
+.acknowledgements {
+  display: block;
+  float: left;
+  margin-right: 4.82916%;
+  width: 100%;
+  margin-right: 0;
+  background-color: #eeeeee; }
+  .acknowledgements:last-child {
     margin-right: 0; }
 
 .teaser {
@@ -1258,6 +1269,8 @@ a.next:hover {
       display: table; }
     .statInfo li:after {
       clear: both; }
+  .statInfo a {
+    color: white; }
 
 .nationalInfo {
   background: url(../img/national-bg.png) no-repeat bottom center; }
@@ -1266,17 +1279,8 @@ a.next:hover {
   background: url(../img/global-bg.png) no-repeat bottom right; }
 
 .statistic {
-  float: left;
   font-size: 2.25em;
-  font-weight: bold;
-  margin-right: 10px;
-  text-align: right;
-  width: 50px; }
-
-.statistic-desc {
-  float: left;
-  max-width: 300px;
-  padding-top: 7px; }
+  font-weight: bold; }
 
 /* Content Sidebar */
 .secondary-column {

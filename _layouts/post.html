@@ -71,9 +71,17 @@ layout: wrapper
 					<ul>
 						{% for item in page.statistics %}
 						<li>
-							<div class="statistic">{{ item.stat }}</div>
-							<div class="statistic-desc">{{ item.desc }}</div>
-						</li>
+							{% if item.link %}
+							<a href="{{ item.link }}" {% if item.type == "image" %} rel="lightbox" title="{{ item.item }}"{% else %} target="_blank" {% endif %}>
+								<span class="statistic">{{ item.stat }}</span>
+								<span class="statistic-desc">{{ item.desc }}</span>
+								<span class="ext-{{ item.type}}"> LINK</span>
+							</a>
+							{% else %}
+							<span class="statistic">{{ item.stat }}</span>
+							<span class="statistic-desc">{{ item.desc }}</span>
+							{% endif %}
+						</li>						
 						{% endfor %}
 					</ul>
 				</div>

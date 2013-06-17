@@ -513,17 +513,24 @@ label {
 .actions {
     @include span-columns(6 of 12);
     @include omega();
-    background-color: #eee;
 }
 
 .signup {
     @include span-columns(6 of 6);
     @include omega();
+    background-color: $primary;
 }
 
 .donate {
     @include span-columns(6 of 6);
     @include omega();
+    background-color: $darkGrey;
+}
+
+.acknowledgements {
+    @include span-columns(6 of 6);
+    @include omega();
+    background-color: $lightGrey;
 }
 
 .teaser {
@@ -726,6 +733,9 @@ a.next:hover {
         @include clearfix;
         margin-bottom: 20px;
     }
+    a { 
+        color: white 
+    }
 }
 
 .nationalInfo {
@@ -737,18 +747,12 @@ a.next:hover {
 }
 
 .statistic {
-    float: left;
     font-size: 2.25em;
     font-weight: bold;
-    margin-right: 10px;
-    text-align: right;
-    width: 50px;
 }
 
 .statistic-desc {
-    float: left;
-    max-width: 300px;
-    padding-top: 7px;
+
 }
 
 /* Content Sidebar */
