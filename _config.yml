@@ -20,16 +20,6 @@ prose:
           element: "text"
           label: "Year"
           value: "default"
-      - name: "published"
-        field:
-          element: "select"
-          label: "Publish"
-          placeholder: "Publish this item"
-          options:
-            - name: "True"
-              value: true
-            - name: "false"
-              value: false
       - name: "timeline"
         field:
           element: "select"
