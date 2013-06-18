@@ -1028,7 +1028,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
 
 .latest, .actions {
   min-height: 420px;
-  margin-bottom: 20px; }
+  font-family: "Melbourne", sans-serif;
+  font-size: 1.95em; }
 
 .latest {
   display: block;
@@ -1047,35 +1048,21 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   .actions:last-child {
     margin-right: 0; }
 
-.signup {
-  display: block;
-  float: left;
-  margin-right: 4.82916%;
-  width: 100%;
-  margin-right: 0;
-  background-color: #09835f; }
-  .signup:last-child {
-    margin-right: 0; }
+.signup, .donate, .acknowledgements {
+  padding: 20px 30px;
+  display: block; }
 
-.donate {
-  display: block;
-  float: left;
-  margin-right: 4.82916%;
-  width: 100%;
-  margin-right: 0;
-  background-color: #333333; }
-  .donate:last-child {
-    margin-right: 0; }
+a.signup {
+  background-color: #09835f;
+  color: white; }
 
-.acknowledgements {
-  display: block;
-  float: left;
-  margin-right: 4.82916%;
-  width: 100%;
-  margin-right: 0;
-  background-color: #eeeeee; }
-  .acknowledgements:last-child {
-    margin-right: 0; }
+a.donate {
+  background-color: #333333;
+  color: white; }
+
+a.acknowledgements {
+  background-color: #eeeeee;
+  color: #333333; }
 
 .teaser {
   display: block;
@@ -1193,6 +1180,10 @@ a.next:hover {
   background: url("../img/preface-video-bg.jpg") #333333; }
   .page-preface .container {
     border-color: #222; }
+
+.landing-preface .container {
+  background-color: white;
+  border: none; }
 
 .video-box {
   display: block;

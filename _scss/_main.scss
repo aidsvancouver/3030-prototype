@@ -503,7 +503,8 @@ label {
 
 .latest, .actions {
     min-height: 420px;
-    margin-bottom: 20px;
+    font-family: $rounded;
+    font-size: 1.95em;
 }
 
 .latest {
@@ -515,22 +516,24 @@ label {
     @include omega();
 }
 
-.signup {
-    @include span-columns(6 of 6);
-    @include omega();
+.signup, .donate, .acknowledgements {
+    padding: 20px 30px;
+    display: block;
+}
+
+a.signup {
     background-color: $primary;
+    color: white;
 }
 
-.donate {
-    @include span-columns(6 of 6);
-    @include omega();
+a.donate {
     background-color: $darkGrey;
+    color: white;
 }
 
-.acknowledgements {
-    @include span-columns(6 of 6);
-    @include omega();
+a.acknowledgements {
     background-color: $lightGrey;
+    color: $darkGrey;
 }
 
 .teaser {
@@ -667,6 +670,13 @@ a.next:hover {
     background: url('../img/preface-video-bg.jpg') #333;
     .container {
         border-color: #222;
+    }
+}
+
+.landing-preface {
+    .container {
+        background-color: white;
+        border: none;
     }
 }
 
