@@ -27,9 +27,9 @@ prose:
           placeholder: "Publish this item"
           options:
             - name: "True"
-              value: "true"
+              value: true
             - name: "false"
-              value: "false"
+              value: false
       - name: "timeline"
         field:
           element: "select"
@@ -37,9 +37,9 @@ prose:
           placeholder: "Choose to display the timeline or not"
           options:
             - name: "Yes"
-              value: "true"
+              value: true
             - name: "No"
-              value: "false"
+              value: false
       - name: "teaserText"
         field:
           element: "text"
