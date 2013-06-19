@@ -656,7 +656,8 @@ hr {
   border-left: thin solid #ddd;
   border-right: thin solid #ddd;
   padding: 0px;
-  width: 1020px; }
+  width: 1020px;
+  max-width: 1020px; }
   .container:before, .container:after {
     content: " ";
     display: table; }
@@ -1027,30 +1028,49 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   border: 0; }
 
 .latest, .actions {
-  min-height: 420px;
-  font-family: "Melbourne", sans-serif;
-  font-size: 1.95em; }
-
-.latest {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .latest:last-child {
-    margin-right: 0; }
-
-.actions {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 48.82117%;
-  margin-right: 0; }
-  .actions:last-child {
+  margin-right: 0;
+  width: 50%;
+  min-height: 380px;
+  font-family: "Melbourne", sans-serif;
+  font-size: 1.5em; }
+  .latest:last-child, .actions:last-child {
     margin-right: 0; }
 
+.latest {
+  border-right: 2px solid #333;
+  height: 380px;
+  width: 62%; }
+  .latest p {
+    margin: 0 250px 0 30px; }
+  .latest .link {
+    color: #333333;
+    margin-top: 10px; }
+
+.latest-title {
+  color: #333333;
+  font-size: 3em;
+  font-weight: normal;
+  margin: 30px 0 0 30px; }
+
+.actions {
+  background-color: #eee;
+  border-right: 2px solid #000;
+  width: 38%; }
+
 .signup, .donate, .acknowledgements {
+  background: url(../img/action-icons.png) no-repeat transparent 265px 35px;
   padding: 20px 30px;
   display: block; }
+
+.donate {
+  background-position: 265px -135px; }
+
+.acknowledgements {
+  background-position: 265px -330px; }
 
 a.signup {
   background-color: #09835f;
@@ -1063,6 +1083,15 @@ a.donate {
 a.acknowledgements {
   background-color: #eeeeee;
   color: #333333; }
+
+.teasers {
+  *zoom: 1;
+  margin: 20px 0; }
+  .teasers:before, .teasers:after {
+    content: " ";
+    display: table; }
+  .teasers:after {
+    clear: both; }
 
 .teaser {
   display: block;
@@ -1077,7 +1106,8 @@ a.acknowledgements {
     margin-right: 0; }
 
 .teaser-title {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-weight: normal; }
 
 .teaser-img {
   display: block;
@@ -1096,9 +1126,18 @@ a.acknowledgements {
   left: 240px;
   padding: 10px 10px 30px 20px;
   width: 265px;
-  z-index: 999; }
+  z-index: 999;
+  -webkit-box-shadow: 2px 2px 2px 0px #AAAAAA;
+  /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  box-shadow: 2px 2px 2px 0px #AAAAAA; }
   .teaser-txt p {
     margin: 0; }
+
+.teaser:nth-child(2n) .teaser-title {
+  color: white; }
+.teaser:nth-child(2n) .teaser-txt {
+  background-color: #09835f;
+  color: white; }
 
 .last {
   left: -265px; }
@@ -1181,9 +1220,10 @@ a.next:hover {
   .page-preface .container {
     border-color: #222; }
 
-.landing-preface .container {
-  background-color: white;
-  border: none; }
+.landing-preface {
+  height: 380px; }
+  .landing-preface .container {
+    border: none; }
 
 .video-box {
   display: block;
@@ -1202,7 +1242,14 @@ a.next:hover {
 
 /* CONTENT */
 .page-title {
-  margin-bottom: 0em; }
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  margin: 10px auto 20px auto;
+  width: 167px;
+  height: 72px; }
 
 .page-content {
   padding: 0; }
@@ -1360,13 +1407,11 @@ a.next:hover {
 
 /* FOOTER */
 .site-footer {
-  font-size: 1.25em;
-  font-family: "Melbourne", sans-serif;
+  font-size: .75em;
   background: #09835f;
   color: white;
   margin-top: 20px; }
   .site-footer .container {
-    padding: 20px;
     border-color: transparent; }
 
 .av-logo {
@@ -1390,7 +1435,7 @@ a.next:hover {
   margin-right: 2.35765%;
   width: 82.94039%;
   margin-right: 0;
-  margin-top: 0; }
+  margin-top: 20px; }
   .footer-msg:last-child {
     margin-right: 0; }
 
@@ -1400,7 +1445,8 @@ a.next:hover {
   margin-right: 2.35765%;
   width: 82.94039%;
   margin-left: 17.05961%;
-  margin-right: 0; }
+  margin-right: 0;
+  margin-bottom: 20px; }
   .copyright:last-child {
     margin-right: 0; }
 

@@ -143,7 +143,7 @@
 
 		scrollFade: function() { // Fade the pager buttons as you scroll down the page
 			var fadeStart = 100, // 100px scroll or less will equiv to 1 opacity
-			    fadeUntil = 1500; // 1500px scroll or more will equiv to 0 opacity
+			    fadeUntil = 2000; // 1500px scroll or more will equiv to 0 opacity
 
 
 			$(window).bind('scroll', function() {
