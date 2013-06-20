@@ -656,13 +656,21 @@ hr {
   border-left: thin solid #ddd;
   border-right: thin solid #ddd;
   padding: 0px;
-  width: 1020px;
-  max-width: 1020px; }
+  padding: 0px;
+  padding: 0px; }
   .container:before, .container:after {
     content: " ";
     display: table; }
   .container:after {
     clear: both; }
+  @media screen and (min-width: 720px) {
+    .container {
+      width: 720px;
+      max-width: 720px; } }
+  @media screen and (min-width: 1020px) {
+    .container {
+      width: 1020px;
+      max-width: 1020px; } }
 
 .info-box {
   padding: 10px 30px 10px 30px;
@@ -882,7 +890,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 40.29137%;
+  width: 100%;
+  margin-right: 0;
   background-color: transparent;
   border: 0;
   color: transparent;
@@ -891,9 +900,21 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   .site-name-slogan:last-child {
     margin-right: 0; }
   .site-name-slogan h1 {
+    margin: 0 auto; }
+  @media screen and (min-width: 1020px) {
+    .site-name-slogan {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 40.29137%; }
+      .site-name-slogan:last-child {
+        margin-right: 0; }
+      .site-name-slogan h1 {
+        margin-left: 40px; } }
+  .site-name-slogan h1 {
     background: url("../img/30-30-logo.png") no-repeat;
     height: 138px;
-    margin-left: 40px; }
+    width: 294px; }
 
 .av-logo {
   display: block;
@@ -912,17 +933,26 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 57.35098%;
-  margin-right: 0;
+  width: 100%;
+  padding: 20px 20px 0 20px;
   color: #09835f;
   font-family: "Melbourne", sans-serif;
   font-size: 21px;
   text-align: justify;
   margin: 0;
-  float: left;
-  padding: 10px 0 0 0px; }
+  float: left; }
   .site-desc:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 1020px) {
+    .site-desc {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 57.35098%;
+      margin-right: 0;
+      padding: 10px 0 0 0px; }
+      .site-desc:last-child {
+        margin-right: 0; } }
 
 /* Navigation */
 .site-navigation {
@@ -1031,19 +1061,26 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 48.82117%;
+  width: 100%;
   margin-right: 0;
-  width: 50%;
-  min-height: 380px;
   font-family: "Melbourne", sans-serif;
   font-size: 1.5em; }
   .latest:last-child, .actions:last-child {
     margin-right: 0; }
 
 .latest {
-  border-right: 2px solid #333;
-  height: 380px;
-  width: 62%; }
+  height: 380px; }
+  @media screen and (min-width: 1020px) {
+    .latest {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0;
+      border-right: 2px solid #333;
+      width: 62%; }
+      .latest:last-child {
+        margin-right: 0; } }
   .latest p {
     margin: 0 250px 0 30px; }
   .latest .link {
@@ -1056,15 +1093,54 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   font-weight: normal;
   margin: 30px 0 0 30px; }
 
-.actions {
-  background-color: #eee;
-  border-right: 2px solid #000;
-  width: 38%; }
+@media screen and (min-width: 1020px) {
+  .actions {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0;
+    width: 38%;
+    background-color: #eee;
+    border-right: 2px solid #000;
+    min-height: 380px; }
+    .actions:last-child {
+      margin-right: 0; } }
 
 .signup, .donate, .acknowledgements {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
   background: url(../img/action-icons.png) no-repeat transparent 265px 35px;
   padding: 20px 30px;
-  display: block; }
+  display: block;
+  text-align: center; }
+  .signup:last-child, .donate:last-child, .acknowledgements:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 720px) {
+    .signup, .donate, .acknowledgements {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      min-height: 250px;
+      text-align: left; }
+      .signup:last-child, .donate:last-child, .acknowledgements:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1020px) {
+    .signup, .donate, .acknowledgements {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      min-height: 0px; }
+      .signup:last-child, .donate:last-child, .acknowledgements:last-child {
+        margin-right: 0; } }
+
+@media screen and (max-width: 720px) {
+  .signup {
+    border-top: thin solid #333333; } }
 
 .donate {
   background-position: 265px -135px; }
@@ -1097,13 +1173,21 @@ a.acknowledgements {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 23.23176%;
+  width: 31.76157%;
   background-color: #eee;
   margin-bottom: 20px;
   min-height: 131px;
   position: relative; }
   .teaser:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 1020px) {
+    .teaser {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .teaser:last-child {
+        margin-right: 0; } }
 
 .teaser-title {
   margin-bottom: 10px;
@@ -1142,8 +1226,12 @@ a.acknowledgements {
 .last {
   left: -265px; }
 
-.teaser:nth-child(4n) {
-  margin-right: 0; }
+@media screen and (max-width: 720px) {
+  .teasers .teaser:nth-child(3n) {
+    margin-right: 0; } }
+@media screen and (min-width: 1020px) {
+  .teasers .teaser:nth-child(4n) {
+    margin-right: 0; } }
 
 .calendar-title {
   font-family: "Melbourne", sans-serif;
@@ -1182,14 +1270,18 @@ a.next:hover {
   color: #bbb; }
 
 .previous, .next {
-  font-family: "Melbourne", sans-serif;
-  font-size: 3em;
-  position: fixed;
-  width: 169px;
-  height: 339px;
-  top: 320px; }
-  .previous .pager-txt, .next .pager-txt {
-    margin-top: 135px; }
+  display: none; }
+  @media screen and (min-width: 1020px) {
+    .previous, .next {
+      display: block;
+      font-family: "Melbourne", sans-serif;
+      font-size: 3em;
+      position: fixed;
+      width: 169px;
+      height: 339px;
+      top: 320px; }
+      .previous .pager-txt, .next .pager-txt {
+        margin-top: 135px; } }
 
 .previous .pager-bg {
   background: url("../img/arrows.png") no-repeat transparent;
@@ -1226,19 +1318,31 @@ a.next:hover {
     border: none; }
 
 .video-box {
+  height: 330px;
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 100%;
-  background-color: #09835f;
-  height: 540px; }
+  background-color: #09835f; }
   .video-box:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 720px) {
+    .video-box {
+      width: 720px;
+      height: 405px; } }
+  @media screen and (min-width: 1020px) {
+    .video-box {
+      border-left: 30px solid #09835f;
+      border-right: 30px solid #09835f;
+      height: 540px;
+      width: 1020px; } }
+  .video-box iframe {
+    width: 100%;
+    height: 100%; }
 
 .video-player {
   border-right: 2px solid #333;
-  border-left: 2px solid #333;
-  margin-left: 30px; }
+  border-left: 2px solid #333; }
 
 /* CONTENT */
 .page-title {
@@ -1261,24 +1365,44 @@ a.next:hover {
   border: 0;
   margin-top: 10px; }
 
-.rightColumn {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-  border-left: thin solid #ddd;
-  width: 42.5%; }
-  .rightColumn:last-child {
+@media screen and (min-width: 720px) {
+  .rightColumn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
     margin-right: 0; }
+    .rightColumn:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 1020px) {
+  .rightColumn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    border-left: thin solid #ddd;
+    width: 42.5%; }
+    .rightColumn:last-child {
+      margin-right: 0; } }
 
-.leftColumn {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 57.35098%;
-  margin-right: 0; }
-  .leftColumn:last-child {
+@media screen and (min-width: 720px) {
+  .leftColumn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
     margin-right: 0; }
+    .leftColumn:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 1020px) {
+  .leftColumn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    margin-right: 0; }
+    .leftColumn:last-child {
+      margin-right: 0; } }
 
 .localInfo, .nationalInfo {
   border-bottom: 0; }
@@ -1289,7 +1413,7 @@ a.next:hover {
 
 .statInfo {
   *zoom: 1;
-  background: url(../img/stats-bg.png) no-repeat;
+  background: url(../img/stats-bg.png) no-repeat top right;
   color: #eee; }
   .statInfo:before, .statInfo:after {
     content: " ";
@@ -1338,20 +1462,6 @@ a.next:hover {
     display: table; }
   .page-postscript:after {
     clear: both; }
-  @media screen and (min-width: 768px) {
-    .page-postscript .block {
-      display: block;
-      float: left;
-      margin-right: 3.57866%;
-      width: 48.21067%; }
-      .page-postscript .block:last-child {
-        margin-right: 0; }
-      .page-postscript .block:nth-child(2n) {
-        margin-right: 0; } }
-  .page-postscript .block:nth-child(even) {
-    float: right; }
-  .page-postscript .block:nth-child(2) {
-    height: 300px; }
 
 /* Sponsors */
 .sponsors {
@@ -1371,40 +1481,7 @@ a.next:hover {
     background-color: transparent;
     text-align: center; }
 
-/* SIDEBAR */
-.page-sidebar {
-  display: none; }
-  @media screen and (min-width: 768px) {
-    .page-sidebar {
-      display: block;
-      background: #eee;
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-right: 0; }
-      .page-sidebar:last-child {
-        margin-right: 0; } }
-
 /* POSTSCRIPT */
-.page-postscript .block {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .page-postscript .block:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .page-postscript .block {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 23.23176%; }
-      .page-postscript .block:last-child {
-        margin-right: 0; }
-      .page-postscript .block:nth-child(4n) {
-        margin-right: 0; } }
-
 /* FOOTER */
 .site-footer {
   font-size: .75em;
