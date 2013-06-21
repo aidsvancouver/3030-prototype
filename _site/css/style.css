@@ -1507,6 +1507,46 @@ a.next:hover {
     background-color: transparent;
     text-align: center; }
 
+.sponsor {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  min-height: 160px;
+  text-align: center; }
+  .sponsor:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 720px) {
+    .sponsor {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .sponsor:last-child {
+        margin-right: 0; } }
+
+@media screen and (max-width: 720px) {
+  .television {
+    margin-right: 0; } }
+
+@media screen and (min-width: 720px) {
+  .silver, .print {
+    margin-right: 0; } }
+
+@media screen and (min-width: 720px) {
+  .media, .print {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    min-height: 100px; }
+    .media:last-child, .print:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 720px) {
+  .media {
+    margin-left: 25.58941%; } }
+
 /* POSTSCRIPT */
 /* FOOTER */
 .site-footer {

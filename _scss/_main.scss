@@ -969,6 +969,40 @@ a.next:hover {
     }
 }
 
+.sponsor {
+    @include span-columns(4);
+    @include media($min720) {
+        @include span-columns(3);
+    }
+    min-height: 160px;
+    text-align: center;
+}
+
+.television {
+    @include media($max720) {
+        @include omega();
+    }
+}
+
+.silver, .print {
+    @include media($min720) {   
+        @include omega();
+    }
+}
+
+.media, .print {
+    @include media($min720) {
+        @include span-columns(3);
+        min-height: 100px;
+    }
+}
+
+.media {
+    @include media($min720) {      
+        @include shift(3);    
+    }
+}
+
 /* POSTSCRIPT */
 
 /* FOOTER */
