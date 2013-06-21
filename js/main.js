@@ -218,7 +218,7 @@
 	var teaserRollOver = {
 		init: function(config) {
 			this.config = config;
-			this.lastColAddClass();
+			//this.lastColAddClass();
 			this.bind();
 		},
 

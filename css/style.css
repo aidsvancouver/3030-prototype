@@ -934,15 +934,17 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   float: left;
   margin-right: 2.35765%;
   width: 100%;
-  padding: 20px 20px 0 20px;
+  font-size: 1.25em;
+  padding: 20px 40px 0 40px;
+  text-align: center;
   color: #09835f;
   font-family: "Melbourne", sans-serif;
-  font-size: 21px;
-  text-align: justify;
-  margin: 0;
-  float: left; }
+  margin: 0; }
   .site-desc:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 720px) {
+    .site-desc {
+      text-align: left; } }
   @media screen and (min-width: 1020px) {
     .site-desc {
       display: block;
@@ -950,7 +952,9 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       margin-right: 2.35765%;
       width: 57.35098%;
       margin-right: 0;
-      padding: 10px 0 0 0px; }
+      padding: 10px 0 0 0px;
+      font-size: 21px;
+      text-align: justify; }
       .site-desc:last-child {
         margin-right: 0; } }
 
@@ -1093,19 +1097,27 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   font-weight: normal;
   margin: 30px 0 0 30px; }
 
-@media screen and (min-width: 1020px) {
-  .actions {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-right: 0;
-    width: 38%;
-    background-color: #eee;
-    border-right: 2px solid #000;
-    min-height: 380px; }
-    .actions:last-child {
-      margin-right: 0; } }
+.actions {
+  border-bottom: 5px solid #333333;
+  padding-bottom: 5px; }
+  @media screen and (max-width: 720px) {
+    .actions {
+      display: none; } }
+  @media screen and (min-width: 1020px) {
+    .actions {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0;
+      border: none;
+      padding: 0;
+      width: 38%;
+      background-color: #eee;
+      border-right: 2px solid #000;
+      min-height: 380px; }
+      .actions:last-child {
+        margin-right: 0; } }
 
 .signup, .donate, .acknowledgements {
   display: block;
@@ -1115,6 +1127,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   background: url(../img/action-icons.png) no-repeat transparent 265px 35px;
   padding: 20px 30px;
   display: block;
+  font-size: .8em;
   text-align: center; }
   .signup:last-child, .donate:last-child, .acknowledgements:last-child {
     margin-right: 0; }
@@ -1124,8 +1137,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       float: left;
       margin-right: 2.35765%;
       width: 31.76157%;
-      min-height: 250px;
-      text-align: left; }
+      margin-top: 10px;
+      min-height: 150px; }
       .signup:last-child, .donate:last-child, .acknowledgements:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 1020px) {
@@ -1134,7 +1147,10 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       float: left;
       margin-right: 2.35765%;
       width: 100%;
-      min-height: 0px; }
+      font-size: 1em;
+      margin: 0;
+      min-height: 0px;
+      text-align: left; }
       .signup:last-child, .donate:last-child, .acknowledgements:last-child {
         margin-right: 0; } }
 
@@ -1173,13 +1189,21 @@ a.acknowledgements {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 31.76157%;
+  width: 100%;
   background-color: #eee;
   margin-bottom: 20px;
   min-height: 131px;
   position: relative; }
   .teaser:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 720px) {
+    .teaser {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .teaser:last-child {
+        margin-right: 0; } }
   @media screen and (min-width: 1020px) {
     .teaser {
       display: block;
@@ -1203,19 +1227,20 @@ a.acknowledgements {
 .teaser-img:hover {
   background-position: 0 -131px; }
 
-.teaser-txt {
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 240px;
-  padding: 10px 10px 30px 20px;
-  width: 265px;
-  z-index: 999;
-  -webkit-box-shadow: 2px 2px 2px 0px #AAAAAA;
-  /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-  box-shadow: 2px 2px 2px 0px #AAAAAA; }
-  .teaser-txt p {
-    margin: 0; }
+@media screen and (min-width: 720px) {
+  .teaser-txt {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 240px;
+    padding: 10px 10px 30px 20px;
+    width: 265px;
+    z-index: 999;
+    -webkit-box-shadow: 2px 2px 2px 0px #AAAAAA;
+    /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow: 2px 2px 2px 0px #AAAAAA; }
+    .teaser-txt p {
+      margin: 0; } }
 
 .teaser:nth-child(2n) .teaser-title {
   color: white; }
@@ -1223,15 +1248,16 @@ a.acknowledgements {
   background-color: #09835f;
   color: white; }
 
-.last {
-  left: -265px; }
-
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1020px) {
   .teasers .teaser:nth-child(3n) {
-    margin-right: 0; } }
+    margin-right: 0; }
+    .teasers .teaser:nth-child(3n) .teaser-txt {
+      left: -265px; } }
 @media screen and (min-width: 1020px) {
   .teasers .teaser:nth-child(4n) {
-    margin-right: 0; } }
+    margin-right: 0; }
+    .teasers .teaser:nth-child(4n) .teaser-txt {
+      left: -265px; } }
 
 .calendar-title {
   font-family: "Melbourne", sans-serif;
