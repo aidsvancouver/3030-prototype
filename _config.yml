@@ -1,7 +1,6 @@
 auto: true
 server: true
 permalink: /:title
-baseurl: /3030-prototype
 rooturl: "_posts"
 prose:
   metadata:

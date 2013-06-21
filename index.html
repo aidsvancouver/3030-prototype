@@ -6,19 +6,14 @@ timeline: false
 <section class="teasers">
     {% for post in site.posts reversed %}
         <article class="teaser">
-            <a href="/3030-prototype{{ post.url }}" class="teaser-img" style="background-image: url(/3030-prototype/img/{{ post.teaserImg }});">
+            <a href="/{{ post.title }}" class="teaser-img" style="background-image: url(/img/{{ post.teaserImg }});">
                 <div class="calendar-title"></div>
             </a>
             <div class="teaser-txt">
                 <h2 class="teaser-title">{{ post.title }}</h2>
                 <small>{{ post.teaserText }}</small><br><br>
-                <img src="/3030-prototype/img/small-arrow.png">
+                <img src="/img/small-arrow.png">
             </div>
         </article>
     {% endfor %}
-    <!-- Remove this message for now
-    <article class="post-teaser">
-        <p></p>
-    </article>
-    -->
 </section>
