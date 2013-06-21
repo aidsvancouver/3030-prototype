@@ -1218,10 +1218,10 @@ a.acknowledgements {
   font-weight: normal; }
 
 .teaser-img {
+  border: 1px solid #ddd;
   display: block;
   height: 131px;
   position: relative;
-  width: 235px;
   z-index: 2; }
 
 .teaser-img:hover {
