@@ -914,7 +914,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   .site-name-slogan h1 {
     background: url("../img/30-30-logo.png") no-repeat;
     height: 138px;
-    width: 294px; }
+    width: 300px; }
 
 .av-logo {
   display: block;
@@ -1118,16 +1118,31 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       min-height: 380px; }
       .actions:last-child {
         margin-right: 0; } }
+  .actions h4 {
+    text-transform: uppercase; }
+
+.signup {
+  background: url(../img/action-signup.jpg) no-repeat; }
+  @media screen and (max-width: 720px) {
+    .signup {
+      border-top: thin solid #333333; } }
+
+.donate {
+  background: url(../img/action-donate.jpg) no-repeat; }
+  .donate h4 {
+    color: #eeeeee; }
+
+.acknowledgements {
+  background: url(../img/action-acknowledge.jpg) no-repeat; }
 
 .signup, .donate, .acknowledgements {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 100%;
-  background: url(../img/action-icons.png) no-repeat transparent 265px 35px;
   padding: 20px 30px;
   display: block;
-  font-size: .8em;
+  font-size: .75em;
   text-align: center; }
   .signup:last-child, .donate:last-child, .acknowledgements:last-child {
     margin-right: 0; }
@@ -1138,7 +1153,9 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       margin-right: 2.35765%;
       width: 31.76157%;
       margin-top: 10px;
-      min-height: 150px; }
+      min-height: 150px;
+      background-position: center right;
+      border-radius: 10px; }
       .signup:last-child, .donate:last-child, .acknowledgements:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 1020px) {
@@ -1147,22 +1164,14 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       float: left;
       margin-right: 2.35765%;
       width: 100%;
-      font-size: 1em;
+      background-position: center right;
+      border-radius: 0;
+      font-size: .9em;
       margin: 0;
-      min-height: 0px;
+      min-height: 110px;
       text-align: left; }
       .signup:last-child, .donate:last-child, .acknowledgements:last-child {
         margin-right: 0; } }
-
-@media screen and (max-width: 720px) {
-  .signup {
-    border-top: thin solid #333333; } }
-
-.donate {
-  background-position: 265px -135px; }
-
-.acknowledgements {
-  background-position: 265px -330px; }
 
 a.signup {
   background-color: #09835f;
@@ -1190,8 +1199,6 @@ a.acknowledgements {
   float: left;
   margin-right: 2.35765%;
   width: 100%;
-  background-color: #eee;
-  margin-bottom: 20px;
   min-height: 131px;
   position: relative; }
   .teaser:last-child {
@@ -1201,7 +1208,8 @@ a.acknowledgements {
       display: block;
       float: left;
       margin-right: 2.35765%;
-      width: 31.76157%; }
+      width: 31.76157%;
+      margin-bottom: 20px; }
       .teaser:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 1020px) {
@@ -1218,15 +1226,37 @@ a.acknowledgements {
   font-weight: normal; }
 
 .teaser-img {
-  border: 1px solid #ddd;
+  background-repeat: no-repeat;
   display: block;
   height: 131px;
   position: relative;
   z-index: 2; }
+  @media screen and (max-width: 720px) {
+    .teaser-img {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .teaser-img:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 720px) {
+    .teaser-img {
+      border-top: thin solid #ddd; } }
+  @media screen and (min-width: 720px) {
+    .teaser-img {
+      border: 1px solid #ddd; } }
 
 .teaser-img:hover {
   background-position: 0 -131px; }
 
+@media screen and (max-width: 720px) {
+  .teaser-txt {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .teaser-txt:last-child {
+      margin-right: 0; } }
 @media screen and (min-width: 720px) {
   .teaser-txt {
     background-color: white;

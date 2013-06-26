@@ -223,6 +223,25 @@
 		},
 
 		bind: function() {
+			var _window = $(window);
+			var pageWidth = _window.width();
+
+			if (pageWidth > 720) {
+				teaserRollOver.hideDesc();
+			};
+
+			_window.on('resize', function() {
+				var pageWidth = _window.width();
+				if (pageWidth > 720) {
+					teaserRollOver.hideDesc();
+				} else {
+					teaserRollOver.config.teaser.off('mouseleave');
+					teaserRollOver.config.teaser.find('.teaser-txt').show();				
+				};
+			});
+		},
+
+		hideDesc: function () {
 			teaserRollOver.config.teaser.on('mouseenter', function() {
 				$(this).find('.teaser-txt').fadeIn(150);
 			}).on('mouseleave', function() {
@@ -232,13 +251,13 @@
 			// Hides the teaser text, and also ensures that when you hover over the text it hides.
 			teaserRollOver.config.teaser.find('.teaser-txt').hide().on('mouseenter', function() {
 				$(this).hide();
-			});
-		},
+			});				
+		}
 
 		// add a class to the last column in each row
-		lastColAddClass: function() {
-			teaserRollOver.config.lastColChild.find('.teaser-txt').addClass('last');
-		}
+		// lastColAddClass: function() {
+		// 	teaserRollOver.config.lastColChild.find('.teaser-txt').addClass('last');
+		// }
 	};
 
 	teaserRollOver.init({
@@ -254,8 +273,6 @@
 				rightHeight = config.rightCol.height(),
 				localHeight = config.leftCol.find('.localInfo'),
 				diff = rightHeight - leftHeight + 20;
-
-			console.log('test: ' + leftHeight + "  " + rightHeight + " " + diff + " -- " + localHeight.height());
 
 			if (diff > 0) {
 				var newHeight = diff + localHeight.height()

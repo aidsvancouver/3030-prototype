@@ -377,7 +377,7 @@ label {
     h1 {
         background: url('../img/30-30-logo.png') no-repeat;
         height: 138px;
-        width: 294px;
+        width: 300px;
     }
 }
 
@@ -579,26 +579,8 @@ label {
         border-right: 2px solid #000;
         min-height: 380px;
     }
-}
-
-.signup, .donate, .acknowledgements {
-    @include span-columns(12);
-    background: url(../img/action-icons.png) no-repeat transparent 265px 35px;
-    padding: 20px 30px;
-    display: block;
-    font-size: .8em;
-    text-align: center;
-    @include media($min720) {
-        @include span-columns(4);
-        margin-top: 10px;
-        min-height: 150px;
-    }
-    @include media($min1020) {
-        @include span-columns(12);
-        font-size: 1em;
-        margin: 0;
-        min-height: 0px;
-        text-align: left;
+    h4 {
+        text-transform: uppercase;
     }
 }
 
@@ -606,14 +588,42 @@ label {
     @include media($max720) {
         border-top: thin solid $darkGrey;
     }
+    background: url(../img/action-signup.jpg) no-repeat;
 }
 
 .donate {
-    background-position: 265px -135px;
+    background: url(../img/action-donate.jpg) no-repeat;
+    h4 {
+        color: $lightGrey;
+    }
 }
 
 .acknowledgements {
-    background-position: 265px -330px;    
+    background: url(../img/action-acknowledge.jpg) no-repeat;
+}
+
+.signup, .donate, .acknowledgements {
+    @include span-columns(12);
+    padding: 20px 30px;
+    display: block;
+    font-size: .75em;
+    text-align: center;
+    @include media($min720) {
+        @include span-columns(4);
+        margin-top: 10px;
+        min-height: 150px;
+        background-position: center right;
+        border-radius: 10px;
+    }
+    @include media($min1020) {
+        @include span-columns(12);
+        background-position: center right;
+        border-radius: 0;
+        font-size: .9em;
+        margin: 0;
+        min-height: 110px;
+        text-align: left;
+    }
 }
 
 a.signup {
@@ -640,12 +650,11 @@ a.acknowledgements {
     @include span-columns(12);
     @include media($min720) {
         @include span-columns(4);
+        margin-bottom: 20px;
     }    
     @include media($min1020) {
         @include span-columns(3);
     }
-    background-color: #eee;
-    margin-bottom: 20px;
     min-height: 131px;
     position: relative;
 }
@@ -656,11 +665,20 @@ a.acknowledgements {
 }
 
 .teaser-img {
-    border: 1px solid #ddd;
+    @include media($max720) {
+        @include span-columns(4);
+    }    
+    background-repeat: no-repeat;    
     display: block;
     height: 131px;
     position: relative;
     z-index: 2;
+    @include media($max720) {
+        border-top: thin solid #ddd;
+    }
+    @include media($min720) {
+        border: 1px solid #ddd;
+    }
 }
 
 .teaser-img:hover {
@@ -668,6 +686,9 @@ a.acknowledgements {
 }
 
 .teaser-txt {
+    @include media($max720) {
+        @include span-columns(8);
+    }
     @include media($min720) {
         background-color: white;
         position: absolute;

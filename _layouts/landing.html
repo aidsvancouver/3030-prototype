@@ -3,28 +3,33 @@ layout: wrapper
 ---
 <section class="page-preface landing-preface">
 	<div class="container">
+	    {% for post in site.posts limit: 1 %}
 		<a href="#">
-		<article class="latest" style="background: url(/img/1983-feature.jpg) no-repeat center right">
-	        <div class="latest-title">1983</div>
-	        <p>A tristique penatibus urna ridiculus placerat dapibus.</p>
+		<article class="latest" style="background: url(/img/{{ post.featureImg }}) no-repeat center right">
+	        <div class="latest-title">{{ post.title }}</div>
+	        <p>{{ post.subtitle }}</p>
 	        <p class="link">Watch the latest video.</p>
 		</article>
 		</a>
+		{% endfor %}
 
 		<section class="actions">
-	        <a href="" class="signup">
+	        <a href="/signup/" class="signup">
 			    <article>
-		            Join us July 30th for our 30th Anniversary Celebration. Click here for registration.
+			    	<h4>Celebrate</h4>
+		            RSVP for our 30th Anniversary Celebration on July 30th.
 			    </article>
 		    </a>
-		    <a href="" class="donate">
+		    <a href="http://aidsva.convio.net/donate" class="donate">
 			    <article>
+			    	<h4>Donate</h4>
 		            Our work depends on your continued support! Please donate today!
 		   		</article>
 		   	</a>
-	        <a href="" class="acknowledgements">
+	        <a href="/acknowledgements/" class="acknowledgements">
 			    <article>
-		            Acknowledgements
+			    	<h4>Acknowledge</h4>
+		            
 			    </article>    
 	        </a>
 		</section>		
