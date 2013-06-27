@@ -733,6 +733,8 @@ a.acknowledgements {
     @include media($max720) {
         @include span-columns(12);
         padding: 12px;
+        border-top: thin solid $secondary;
+        border-bottom: thin solid #666;
     }
     @include media($min720) {
         background-color: white;

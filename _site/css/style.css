@@ -1291,7 +1291,9 @@ a.acknowledgements {
     float: left;
     margin-right: 2.35765%;
     width: 100%;
-    padding: 12px; }
+    padding: 12px;
+    border-top: thin solid #21b684;
+    border-bottom: thin solid #666; }
     .teaser-txt:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 720px) {
