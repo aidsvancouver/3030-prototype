@@ -48,8 +48,8 @@ textarea {
 
 /* Typography */
 
-@include font-face(Melbourne, 'https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_reg');
-@include font-face(Melbourne, 'https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_bold', bold);
+@include font-face(Melbourne, '/fonts/melbourne/Melbourne_reg');
+@include font-face(Melbourne, '/fonts/melbourne/Melbourne_bold', bold);
 $sansSerif: verdana, sans-serif;
 $serif: serif;
 $rounded: 'Melbourne', sans-serif;

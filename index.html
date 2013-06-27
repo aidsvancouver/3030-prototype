@@ -6,10 +6,10 @@ timeline: false
 <section class="teasers">
     {% for post in site.posts reversed %}
         <article class="teaser">
-            <a href="/{{ post.title }}" class="teaser-img" style="background-image: url(/img/{{ post.teaserImg }});">
+            <a href="/{% if post.altUrl %}{{ post.altUrl }}{% else %}{{ post.title }}{% endif %}" class="teaser-img" style="background-image: url(/img/{{ post.teaserImg }});">
                 <div class="calendar-title"></div>
             </a>
-            <a href="/{{ post.title }}">
+            <a href="/{% if post.altUrl %}{{ post.altUrl }}{% else %}{{ post.title }}{% endif %}">
                 <div class="teaser-txt">
                     <h2 class="teaser-title">{{ post.title }}</h2>
                     <small>{{ post.teaserText }}</small><br><br>

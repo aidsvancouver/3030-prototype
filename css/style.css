@@ -541,15 +541,15 @@ textarea {
   font-family: Melbourne;
   font-weight: normal;
   font-style: normal;
-  src: url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_reg.eot");
-  src: url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_reg.eot?#iefix") format("embedded-opentype"), url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_reg.woff") format("woff"), url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_reg.ttf") format("truetype"), url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_reg.svg#Melbourne") format("svg"); }
+  src: url("/fonts/melbourne/Melbourne_reg.eot");
+  src: url("/fonts/melbourne/Melbourne_reg.eot?#iefix") format("embedded-opentype"), url("/fonts/melbourne/Melbourne_reg.woff") format("woff"), url("/fonts/melbourne/Melbourne_reg.ttf") format("truetype"), url("/fonts/melbourne/Melbourne_reg.svg#Melbourne") format("svg"); }
 
 @font-face {
   font-family: Melbourne;
   font-weight: bold;
   font-style: normal;
-  src: url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_bold.eot");
-  src: url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_bold.eot?#iefix") format("embedded-opentype"), url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_bold.woff") format("woff"), url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_bold.ttf") format("truetype"), url("https://d2i2cguvwylsao.cloudfront.net/fonts/melbourne/Melbourne_bold.svg#Melbourne") format("svg"); }
+  src: url("/fonts/melbourne/Melbourne_bold.eot");
+  src: url("/fonts/melbourne/Melbourne_bold.eot?#iefix") format("embedded-opentype"), url("/fonts/melbourne/Melbourne_bold.woff") format("woff"), url("/fonts/melbourne/Melbourne_bold.ttf") format("truetype"), url("/fonts/melbourne/Melbourne_bold.svg#Melbourne") format("svg"); }
 
 html,
 button,
