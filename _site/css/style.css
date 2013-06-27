@@ -1093,13 +1093,17 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
     color: #333333;
     margin-top: 10px; }
 
-.latest-label {
+.section-label {
+  font-family: "Melbourne", sans-serif;
   background-color: #09835f;
   color: #eee;
   margin-left: 0px;
   margin-top: 30px;
   padding-left: 34px;
   width: 200px; }
+
+.landing-template .section-label {
+  font-size: 1.5em; }
 
 .latest-year {
   color: #333333;
@@ -1117,10 +1121,6 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   font-size: 1.5em;
   font-weight: normal;
   margin: 0px 0 0 30px; }
-  @media screen and (min-width: 720px) {
-    .latest-title {
-      font-weight: normal;
-      font-size: 2em; } }
 
 .latest-icon {
   background-color: transparent;
@@ -1158,6 +1158,9 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
         margin-right: 0; } }
   .actions h4 {
     text-transform: uppercase; }
+
+.signup:hover, .donate:hover, .acknowledgements:hover {
+  opacity: .9; }
 
 .signup {
   background: url(../img/action-signup.jpg) no-repeat; }
@@ -1624,6 +1627,15 @@ a.next:hover {
   margin-top: 20px; }
   .site-footer .container {
     border-color: transparent; }
+  .site-footer .section-label {
+    background-color: #333333;
+    font-size: 1.5em;
+    min-width: 390px;
+    margin-left: 0px;
+    padding-left: 15px;
+    margin-top: 10px;
+    padding: 5px 0 5px 15px;
+    font-size: 2em; }
 
 .footer-menu {
   font-family: "Melbourne", sans-serif;
@@ -1631,9 +1643,11 @@ a.next:hover {
   padding: 0; }
   .footer-menu a {
     text-decoration: none; }
+  .footer-menu a:hover {
+    color: #333; }
   .footer-menu li {
     display: inline;
-    border-right: thin solid #eee;
+    border-right: thin solid #21b684;
     padding-right: 15px;
     margin-right: 15px;
     font-size: 1.75em; }

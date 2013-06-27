@@ -6,7 +6,7 @@ layout: wrapper
 	    {% for post in site.posts limit: 1 %}
 		<a href="/{{ post.title }}">
 		<article class="latest" style="background: url(/img/{{ post.featureImg }}) no-repeat center right">
-			<div class="latest-label">Latest Video</div>
+			<div class="section-label">Latest Video</div>
 	        <div class="latest-year">{{ post.title }}</div>
 	        <div class="latest-title">{{ post.subtitle }}</div>
 	        <div class="latest-icon">Watch the latest video.</div>
@@ -40,7 +40,7 @@ layout: wrapper
 <article class="landing-template">
 	<div class="container">
 		<header>
-
+	        <div class="section-label">The Timeline</div>
 		</header>
 		
 		<section class="article-body">
