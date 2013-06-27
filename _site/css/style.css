@@ -1274,12 +1274,7 @@ a.acknowledgements {
   z-index: 2; }
   @media screen and (max-width: 720px) {
     .teaser-img {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 31.76157%; }
-      .teaser-img:last-child {
-        margin-right: 0; } }
+      display: none; } }
   @media screen and (max-width: 720px) {
     .teaser-img {
       border-top: thin solid #ddd; } }
@@ -1295,7 +1290,8 @@ a.acknowledgements {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 65.88078%; }
+    width: 100%;
+    padding: 12px; }
     .teaser-txt:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 720px) {

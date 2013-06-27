@@ -710,7 +710,7 @@ a.acknowledgements {
 
 .teaser-img {
     @include media($max720) {
-        @include span-columns(4);
+        display: none;
     }    
     background-repeat: no-repeat;    
     display: block;
@@ -731,7 +731,8 @@ a.acknowledgements {
 
 .teaser-txt {
     @include media($max720) {
-        @include span-columns(8);
+        @include span-columns(12);
+        padding: 12px;
     }
     @include media($min720) {
         background-color: white;

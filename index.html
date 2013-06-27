@@ -9,11 +9,13 @@ timeline: false
             <a href="/{{ post.title }}" class="teaser-img" style="background-image: url(/img/{{ post.teaserImg }});">
                 <div class="calendar-title"></div>
             </a>
-            <div class="teaser-txt">
-                <h2 class="teaser-title">{{ post.title }}</h2>
-                <small>{{ post.teaserText }}</small><br><br>
-                <img src="/img/small-arrow.png">
-            </div>
+            <a href="/{{ post.title }}">
+                <div class="teaser-txt">
+                    <h2 class="teaser-title">{{ post.title }}</h2>
+                    <small>{{ post.teaserText }}</small><br><br>
+                    <img src="/img/small-arrow.png">
+                </div>
+            </a>
         </article>
     {% endfor %}
 </section>
