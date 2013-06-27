@@ -1407,6 +1407,12 @@ a.next:hover {
   .page-preface .container {
     border-color: #222; }
 
+.intro {
+  font-family: "Melbourne", sans-serif;
+  font-size: 2em;
+  color: #eeeeee;
+  padding: 0 20px; }
+
 .landing-preface {
   height: 380px; }
   .landing-preface .container {
@@ -1538,6 +1544,57 @@ a.next:hover {
 .statistic {
   font-size: 2.25em;
   font-weight: bold; }
+
+/* Page Template CONTENT */
+.thanks-list {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0; }
+  .thanks-list:last-child {
+    margin-right: 0; }
+  .thanks-list ul {
+    padding: 0; }
+  .thanks-list li {
+    list-style: none;
+    margin-bottom: 10px; }
+  .thanks-list .inner {
+    padding: 20px 20px 20px 50px; }
+  .thanks-list h3 {
+    color: #09835f;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    margin-top: 30px; }
+
+.thanks-left {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .thanks-left:last-child {
+    margin-right: 0; }
+
+.thanks-right {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-right: 0; }
+  .thanks-right:last-child {
+    margin-right: 0; }
+  .thanks-right .inner {
+    padding-left: 0; }
+
+.thanks-logo {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  padding-right: 10px;
+  padding-bottom: 10px; }
 
 /* Content Sidebar */
 .secondary-column {
