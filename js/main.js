@@ -286,4 +286,13 @@
 		rightCol: $('.rightColumn'),
 	});
 
+// Play button Hover Fade
+
+	$('.latest').on('mouseover', function() {
+		console.log('test: ' + "fired");
+		$(this).find('.latest-icon').fadeTo('fast', .95);
+	}).on('mouseleave', function() {
+		$(this).find('.latest-icon').fadeTo('fast', .25);		
+	});
+
 }());

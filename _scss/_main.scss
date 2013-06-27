@@ -211,11 +211,14 @@ $thinBorder: thin solid #ddd;
         margin: 12px 0 10px 0;
     }
     ul {
+        font-size: 1.2em;
         font-family: $rounded;
-        font-size: 1.5em;
         list-style: none;
         margin-top: 0;
         padding: 0;
+        @include media($min720) {
+            font-size: 1.5em;
+        }
     }
     li {
         line-height: 1.2em;
@@ -364,6 +367,7 @@ label {
 .site-name-slogan {
     @include span-columns(12 of 12);
     @include omega();
+    @include hide-text;    
     h1 {
         margin: 0 auto;
     }
@@ -373,7 +377,6 @@ label {
             margin-left: 40px;
         }
     }
-    @include hide-text;
     h1 {
         background: url('../img/30-30-logo.png') no-repeat;
         height: 138px;
@@ -392,7 +395,7 @@ label {
 
 .site-desc {
     @include span-columns(12 of 12);
-    font-size: 1.25em;
+    font-size: 1em;
     padding: 20px 40px 0 40px;
     text-align: center;
     @include media($min720) {
@@ -532,23 +535,24 @@ label {
     border: 0;
 }
 
-.latest, .actions {
+.latest {
     @include span-columns(12);
     @include omega();
     font-family: $rounded;
-    font-size: 1.5em;
-}
+    font-size: 1.2em;
+    @include media($max480) {
 
-.latest {
+    }
     @include media($min1020) {
         @include span-columns(6 of 12);
         @include omega();
         border-right: 2px solid #333;
+        font-size: 1.5em;
         width: 62%;
     }    
     height: 380px;
     p {
-        margin: 0 250px 0 30px;
+        margin: 0 300px 0 30px;
     }
     .link {
         color: $darkGrey;
@@ -556,16 +560,51 @@ label {
     }
 }
 
-.latest-title {
+.latest-label {
+    background-color: $primary;
+    color: #eee;
+    margin-left: 0px;
+    margin-top: 30px;
+    padding-left: 34px;
+    width: 200px;    
+}
+
+.latest-year {
     color: $darkGrey;
-    font-size: 3em;
+    font-size: 1.5em;
     font-weight: normal;
+    line-height: 50px;
     margin: 30px 0 0 30px;
+    @include media($min720) {
+        font-weight: normal;
+        font-size: 3em;
+    }
+}
+
+.latest-title {
+    color: $primary;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0px 0 0 30px;
+    @include media($min720) {
+        font-weight: normal;
+        font-size: 2em;
+    }    
+}
+
+.latest-icon {
+    @include hide-text;
+    background: url(../img/latest-play.png) no-repeat transparent;
+    width: 110px;
+    height: 110px;
+    margin: 10px 0 0 25px;
+    opacity: .25;
 }
 
 .actions {
     border-bottom: 5px solid $darkGrey;
     padding-bottom: 5px;
+    font-family: $rounded;    
     @include media($max720) {
         display: none;
     }
@@ -606,20 +645,20 @@ label {
     @include span-columns(12);
     padding: 20px 30px;
     display: block;
-    font-size: .75em;
-    text-align: center;
+    font-size: 1.1em;
+    text-align: left;
     @include media($min720) {
         @include span-columns(4);
         margin-top: 10px;
         min-height: 150px;
-        background-position: center right;
+        background-position: -180px 18px;
         border-radius: 10px;
     }
     @include media($min1020) {
         @include span-columns(12);
-        background-position: center right;
+        background-position: -50px center;
         border-radius: 0;
-        font-size: .9em;
+        font-size: 1.25em;
         margin: 0;
         min-height: 110px;
         text-align: left;
@@ -1035,6 +1074,25 @@ a.next:hover {
     margin-top: 20px;
     .container {
         border-color: transparent;
+    }
+}
+
+.footer-menu {
+    font-family: $rounded;
+    margin: 8px 0 0 0;
+    padding: 0;
+    a {
+        text-decoration: none;
+    }
+    li {
+        display: inline;
+        border-right: thin solid #eee;
+        padding-right: 15px;
+        margin-right: 15px;
+        font-size: 1.75em;
+    }
+    li:last-child {
+        border: none;
     }
 }
 

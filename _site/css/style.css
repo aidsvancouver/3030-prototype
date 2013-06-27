@@ -678,11 +678,14 @@ hr {
   .info-box h2 {
     margin: 12px 0 10px 0; }
   .info-box ul {
+    font-size: 1.2em;
     font-family: "Melbourne", sans-serif;
-    font-size: 1.5em;
     list-style: none;
     margin-top: 0;
     padding: 0; }
+    @media screen and (min-width: 720px) {
+      .info-box ul {
+        font-size: 1.5em; } }
   .info-box li {
     line-height: 1.2em;
     margin-bottom: 15px; }
@@ -934,7 +937,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   float: left;
   margin-right: 2.35765%;
   width: 100%;
-  font-size: 1.25em;
+  font-size: 1em;
   padding: 20px 40px 0 40px;
   text-align: center;
   color: #09835f;
@@ -1061,19 +1064,17 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
 .landing-template .container {
   border: 0; }
 
-.latest, .actions {
+.latest {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 100%;
   margin-right: 0;
   font-family: "Melbourne", sans-serif;
-  font-size: 1.5em; }
-  .latest:last-child, .actions:last-child {
-    margin-right: 0; }
-
-.latest {
+  font-size: 1.2em;
   height: 380px; }
+  .latest:last-child {
+    margin-right: 0; }
   @media screen and (min-width: 1020px) {
     .latest {
       display: block;
@@ -1082,24 +1083,61 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       width: 48.82117%;
       margin-right: 0;
       border-right: 2px solid #333;
+      font-size: 1.5em;
       width: 62%; }
       .latest:last-child {
         margin-right: 0; } }
   .latest p {
-    margin: 0 250px 0 30px; }
+    margin: 0 300px 0 30px; }
   .latest .link {
     color: #333333;
     margin-top: 10px; }
 
-.latest-title {
+.latest-label {
+  background-color: #09835f;
+  color: #eee;
+  margin-left: 0px;
+  margin-top: 30px;
+  padding-left: 34px;
+  width: 200px; }
+
+.latest-year {
   color: #333333;
-  font-size: 3em;
+  font-size: 1.5em;
   font-weight: normal;
+  line-height: 50px;
   margin: 30px 0 0 30px; }
+  @media screen and (min-width: 720px) {
+    .latest-year {
+      font-weight: normal;
+      font-size: 3em; } }
+
+.latest-title {
+  color: #09835f;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0px 0 0 30px; }
+  @media screen and (min-width: 720px) {
+    .latest-title {
+      font-weight: normal;
+      font-size: 2em; } }
+
+.latest-icon {
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  background: url(../img/latest-play.png) no-repeat transparent;
+  width: 110px;
+  height: 110px;
+  margin: 10px 0 0 25px;
+  opacity: .25; }
 
 .actions {
   border-bottom: 5px solid #333333;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  font-family: "Melbourne", sans-serif; }
   @media screen and (max-width: 720px) {
     .actions {
       display: none; } }
@@ -1142,8 +1180,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   width: 100%;
   padding: 20px 30px;
   display: block;
-  font-size: .75em;
-  text-align: center; }
+  font-size: 1.1em;
+  text-align: left; }
   .signup:last-child, .donate:last-child, .acknowledgements:last-child {
     margin-right: 0; }
   @media screen and (min-width: 720px) {
@@ -1154,7 +1192,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       width: 31.76157%;
       margin-top: 10px;
       min-height: 150px;
-      background-position: center right;
+      background-position: -180px 18px;
       border-radius: 10px; }
       .signup:last-child, .donate:last-child, .acknowledgements:last-child {
         margin-right: 0; } }
@@ -1164,9 +1202,9 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       float: left;
       margin-right: 2.35765%;
       width: 100%;
-      background-position: center right;
+      background-position: -50px center;
       border-radius: 0;
-      font-size: .9em;
+      font-size: 1.25em;
       margin: 0;
       min-height: 110px;
       text-align: left; }
@@ -1586,6 +1624,21 @@ a.next:hover {
   margin-top: 20px; }
   .site-footer .container {
     border-color: transparent; }
+
+.footer-menu {
+  font-family: "Melbourne", sans-serif;
+  margin: 8px 0 0 0;
+  padding: 0; }
+  .footer-menu a {
+    text-decoration: none; }
+  .footer-menu li {
+    display: inline;
+    border-right: thin solid #eee;
+    padding-right: 15px;
+    margin-right: 15px;
+    font-size: 1.75em; }
+  .footer-menu li:last-child {
+    border: none; }
 
 .av-logo {
   display: block;

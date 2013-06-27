@@ -4,17 +4,18 @@ layout: wrapper
 <section class="page-preface landing-preface">
 	<div class="container">
 	    {% for post in site.posts limit: 1 %}
-		<a href="#">
+		<a href="/{{ post.title }}">
 		<article class="latest" style="background: url(/img/{{ post.featureImg }}) no-repeat center right">
-	        <div class="latest-title">{{ post.title }}</div>
-	        <p>{{ post.subtitle }}</p>
-	        <p class="link">Watch the latest video.</p>
+			<div class="latest-label">Latest Video</div>
+	        <div class="latest-year">{{ post.title }}</div>
+	        <div class="latest-title">{{ post.subtitle }}</div>
+	        <div class="latest-icon">Watch the latest video.</div>
 		</article>
 		</a>
 		{% endfor %}
 
 		<section class="actions">
-	        <a href="/signup/" class="signup">
+	        <a href="http://aidsva.convio.net/site/Calendar/1278056450" class="signup">
 			    <article>
 			    	<h4>Celebrate</h4>
 		            RSVP for our 30th Anniversary Celebration on July 30th.

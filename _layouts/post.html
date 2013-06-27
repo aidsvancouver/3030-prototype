@@ -2,10 +2,17 @@
 layout: wrapper
 ---
 {% if page.previous.url %}
-<a href="/{{ page.previous.title }}" title="Previous Year: {{ page.previous.title }}" class="previous">
-	<div class="pager-bg"></div>
-	<div class="pager-txt">{{ page.previous.title }}</div>
-</a>
+    {% if page.previous.altUrl %}
+    <a href="/{{ page.previous.altUrl }}" title="Previous Year: {{ page.previous.title }}" class="previous">
+        <div class="pager-bg"></div>
+        <div class="pager-txt">{{ page.previous.altPager }}</div>
+    </a>    
+    {% else %}
+    <a href="/{{ page.previous.title }}" title="Previous Year: {{ page.previous.title }}" class="previous">
+    	<div class="pager-bg"></div>
+    	<div class="pager-txt">{{ page.previous.title }}</div>
+    </a>
+    {% endif %}
 {% endif %}
 
 <section class="page-preface">
@@ -20,7 +27,13 @@ layout: wrapper
 	<div class="container">
 		<header>
 	        {% if page.subtitle %}<hgroup>{% endif %}
-	            {% if page.title %}<h1 class="page-title" style="background: url(/img/titles/{{ page.title }}.png)">{{ page.title }}</h1>{% endif %}
+	            {% if page.title %}<h1 class="page-title" 
+                    {% if page.altUrl %}
+                    style="background: url(/img/titles/{{ page.altUrl }}.png); width: 330px;"
+                    {% else %}
+                    style="background: url(/img/titles/{{ page.title }}.png)"
+                    {% endif %}
+                >{{ page.title }}</h1>{% endif %}
 	            {% if page.subtitle %}<h2 class="page-subtitle">{{ page.subtitle }}</h2>{% endif %}
 	        {% if page.subtitle %}</hgroup>{% endif %}
 		</header>
