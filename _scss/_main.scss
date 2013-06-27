@@ -1073,6 +1073,17 @@ a.next:hover {
 
 /* POSTSCRIPT */
 
+.share-links {
+    .container { 
+        border-top: thin solid #ddd;
+        padding: 20px 20px 20px 30px;
+    }
+}
+
+.facebook, .twitter, .google {
+    @include inline-block();
+}
+
 /* FOOTER */
 
 .site-footer {

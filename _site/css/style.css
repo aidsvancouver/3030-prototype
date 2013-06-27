@@ -1617,6 +1617,17 @@ a.next:hover {
     margin-left: 25.58941%; } }
 
 /* POSTSCRIPT */
+.share-links .container {
+  border-top: thin solid #ddd;
+  padding: 20px 20px 20px 30px; }
+
+.facebook, .twitter, .google {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto; }
+
 /* FOOTER */
 .site-footer {
   font-size: .75em;
