@@ -1505,6 +1505,19 @@ a.next:hover {
     .leftColumn:last-child {
       margin-right: 0; } }
 
+.fullColumn {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .fullColumn:last-child {
+    margin-right: 0; }
+  .fullColumn .info-box {
+    padding: 20px 30px; }
+    @media screen and (min-width: 1020px) {
+      .fullColumn .info-box {
+        padding: 50px 150px; } }
+
 .localInfo, .nationalInfo {
   border-bottom: 0; }
 

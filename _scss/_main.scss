@@ -961,6 +961,16 @@ a.next:hover {
     }
 }
 
+.fullColumn {
+    @include span-columns(12);
+    .info-box {
+        padding: 20px 30px;
+        @include media($min1020) {
+            padding: 50px 150px;
+       } 
+    }
+}
+
 .localInfo, .nationalInfo {
     border-bottom: 0;
 }
