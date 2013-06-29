@@ -1117,7 +1117,7 @@ a.next:hover {
     }
 }
 
-.media, .print {
+.media, .print, .bronze {
     @include media($min720) {
         @include span-columns(3);
         min-height: 100px;
