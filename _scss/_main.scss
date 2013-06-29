@@ -1124,9 +1124,14 @@ a.next:hover {
     }
 }
 
+.bronze {
+    @include media($min720) {
+        @include shift(2);
+    }
+}
+
 .media {
     @include media($min720) {      
-        @include shift(3);    
     }
 }
 
