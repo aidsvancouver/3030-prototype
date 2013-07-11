@@ -1,0 +1,7 @@
+<select>
+    {% for post in site.posts %}
+    <option>
+        {{ post.title }} | {{ post.subtitle }}
+    </option>
+    {% endfor %}
+</select>

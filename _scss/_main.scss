@@ -420,6 +420,20 @@ label {
     margin-top: 60px;
 }
 
+.mobile-menu {
+    background-color: $darkGrey;
+    width: 100%;
+    select {
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 0 10px 20px;
+    }
+    @include media($min720) {
+        display: none;
+    }
+}
+
 /* Timeline */
 
 .timeline {
@@ -531,17 +545,24 @@ label {
 
 /* FRONT PAGE / LANDING */
 
-.landing-template .container {
-    border: 0;
+.landing-template {
+    display: none;
+    @include media($min720) {
+        display: block;
+    }
+    .container {
+        border: 0;
+    }
 }
 
 .latest {
+    position: relative;
     @include span-columns(12);
     @include omega();
     font-family: $rounded;
     font-size: 1.2em;
-    @include media($max480) {
-
+    @include media($max720) {
+        background-size: 50px 50px;
     }
     @include media($min1020) {
         @include span-columns(6 of 12);
@@ -567,16 +588,25 @@ label {
     margin-left: 0px;
     margin-top: 30px;
     padding-left: 34px;
-    width: 200px;    
+    width: 200px;
 }
 
-.landing-template .section-label {
-    font-size: 1.5em;
+.landing-preface .section-label {
+    @include media($max720) {
+        font-size: 1.5em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        opacity: .75;
+    }        
 }
 
 .latest-year {
     color: $darkGrey;
-    font-size: 1.5em;
+    font-size: 4em;
     font-weight: normal;
     line-height: 50px;
     margin: 30px 0 0 30px;
@@ -587,6 +617,10 @@ label {
 }
 
 .latest-title {
+    display: none;
+    @include media($min720) {
+        display: block;
+    }
     color: $primary;
     font-size: 1.5em;
     font-weight: normal;
@@ -1099,7 +1133,10 @@ a.next:hover {
 }
 
 .sponsor {
-    @include span-columns(4);
+    @include span-columns(6);
+    @include media($max720) {
+        @include omega(2n);
+    }
     @include media($min720) {
         @include span-columns(3);
     }
@@ -1141,6 +1178,7 @@ a.next:hover {
 
 .share-links {
     .container { 
+        text-align: center;
         border-top: thin solid #ddd;
         padding: 20px 20px 20px 30px;
     }
@@ -1148,6 +1186,10 @@ a.next:hover {
 
 .facebook, .twitter, .google {
     @include inline-block();
+}
+
+.facebook {
+    width: 200px;
 }
 
 /* FOOTER */
@@ -1201,12 +1243,22 @@ a.next:hover {
     @include hide-text;
     background: url(../img/av-logo.png) no-repeat transparent;
     height: 116px;
+    @include media($max720) {
+        @include span-columns(12);
+        background-position: 20px 0;
+    }
 }
 
 .footer-msg {
     @include span-columns(10);
     @include omega();
     margin-top: 20px;
+    @include media($max720) {
+        @include span-columns(12);
+        p, ul {
+            padding: 0 20px;
+        }
+    }    
 }
 
 .copyright {
