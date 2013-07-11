@@ -1,6 +1,6 @@
 <select>
     {% for post in site.posts %}
-    <option>
+    <option value="/{{ post.title">
         {{ post.title }} | {{ post.subtitle }}
     </option>
     {% endfor %}
