@@ -562,7 +562,6 @@ label {
     font-family: $rounded;
     font-size: 1.2em;
     @include media($max720) {
-        background-size: 50px 50px;
     }
     @include media($min1020) {
         @include span-columns(6 of 12);

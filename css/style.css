@@ -1093,9 +1093,6 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   height: 380px; }
   .latest:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 720px) {
-    .latest {
-      background-size: 50px 50px; } }
   @media screen and (min-width: 1020px) {
     .latest {
       display: block;
