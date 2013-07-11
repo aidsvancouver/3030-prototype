@@ -289,10 +289,16 @@
 // Play button Hover Fade
 
 	$('.latest').on('mouseover', function() {
-		console.log('test: ' + "fired");
 		$(this).find('.latest-icon').fadeTo('fast', .95);
 	}).on('mouseleave', function() {
 		$(this).find('.latest-icon').fadeTo('fast', .25);		
 	});
+
+// Mobile select menu
+
+	$('select').on('change', function() {
+		var link = $(this[this.selectedIndex]).attr('value');
+		self.location = link;
+	})
 
 }());
