@@ -1132,45 +1132,20 @@ a.next:hover {
 }
 
 .sponsor {
-    @include span-columns(6);
     @include media($max720) {
+        @include span-columns(6);
         @include omega(2n);
     }
     @include media($min720) {
-        @include span-columns(3);
+        @include span-columns(4);
+        @include omega(3n);
     }
+    @include media($min1020) {
+        @include span-columns(3);
+        @include omega(4n);
+    }    
     min-height: 160px;
     text-align: center;
-}
-
-.television {
-    @include media($max720) {
-        @include omega();
-    }
-}
-
-.silver, .print {
-    @include media($min720) {   
-        @include omega();
-    }
-}
-
-.media, .print, .bronze {
-    @include media($min720) {
-        @include span-columns(3);
-        min-height: 100px;
-    }
-}
-
-.bronze {
-    @include media($min720) {
-        @include shift(2);
-    }
-}
-
-.media {
-    @include media($min720) {      
-    }
 }
 
 /* POSTSCRIPT */

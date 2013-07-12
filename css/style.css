@@ -1679,47 +1679,35 @@ a.next:hover {
     text-align: center; }
 
 .sponsor {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 48.82117%;
   min-height: 160px;
   text-align: center; }
-  .sponsor:last-child {
-    margin-right: 0; }
   @media screen and (max-width: 720px) {
     .sponsor {
-      margin-right: 0; } }
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0; }
+      .sponsor:last-child {
+        margin-right: 0; } }
   @media screen and (min-width: 720px) {
     .sponsor {
       display: block;
       float: left;
       margin-right: 2.35765%;
-      width: 23.23176%; }
+      width: 31.76157%;
+      margin-right: 0; }
       .sponsor:last-child {
         margin-right: 0; } }
-
-@media screen and (max-width: 720px) {
-  .television {
-    margin-right: 0; } }
-
-@media screen and (min-width: 720px) {
-  .silver, .print {
-    margin-right: 0; } }
-
-@media screen and (min-width: 720px) {
-  .media, .print, .bronze {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    min-height: 100px; }
-    .media:last-child, .print:last-child, .bronze:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 720px) {
-  .bronze {
-    margin-left: 17.05961%; } }
+  @media screen and (min-width: 1020px) {
+    .sponsor {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      margin-right: 0; }
+      .sponsor:last-child {
+        margin-right: 0; } }
 
 /* POSTSCRIPT */
 .share-links .container {

@@ -300,5 +300,4 @@
 		var link = $(this[this.selectedIndex]).attr('value');
 		self.location = link;
 	})
-
 }());
