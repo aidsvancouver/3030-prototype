@@ -604,6 +604,9 @@ label {
 }
 
 .latest-year {
+    @include media($max480) {
+        display: none;
+    }    
     color: $darkGrey;
     font-size: 4em;
     font-weight: normal;
@@ -629,6 +632,9 @@ label {
 }
 
 .latest-icon {
+    @include media($max480) {
+        display: none;
+    }
     @include hide-text;
     background: url(../img/latest-play.png) no-repeat transparent;
     width: 110px;
@@ -1132,6 +1138,10 @@ a.next:hover {
 }
 
 .sponsor {
+    @include media($max480) {
+        @include span-columns(12);
+        @include omega();
+    }    
     @include media($max720) {
         @include span-columns(6);
         @include omega(2n);
