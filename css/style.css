@@ -1695,7 +1695,9 @@ a.next:hover {
       width: 100%;
       margin-right: 0; }
       .sponsor:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+      .sponsor img {
+        width: 90%; } }
   @media screen and (max-width: 720px) {
     .sponsor {
       display: block;
