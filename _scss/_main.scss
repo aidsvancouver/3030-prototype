@@ -370,6 +370,7 @@ label {
     @include hide-text;    
     h1 {
         margin: 0 auto;
+        @include hide-text; 
     }
     @include media($min1020) {
         @include span-columns(5 of 12);
@@ -659,6 +660,9 @@ label {
         background-color: #eee;
         border-right: 2px solid #000;
         min-height: 380px;
+        article {
+            width: 260px;
+        }
     }
     h4 {
         text-transform: uppercase;
@@ -1188,20 +1192,30 @@ a.next:hover {
         border-color: transparent;
     }
     .section-label {
+        width: 100%;
+        @include media($min1020) {
+            @include span-columns(5);
+        }
         background-color: #333333;
-        font-size: 1.5em;
-        min-width: 390px;
         margin-left: 0px;
         padding-left: 15px;
         margin-top: 10px;
         padding: 5px 0 5px 15px;
-        font-size: 2em;
+        font-size: 1.75em;
+    }
+    p {
+        @include span-columns(12);
+        margin-bottom: 0;
     }
 }
 
 .footer-menu {
+        @include media($min1020) {
+            @include span-columns(7);
+            @include omega();
+        }    
     font-family: $rounded;
-    margin: 8px 0 0 0;
+    margin: 20px 0 0 0;
     padding: 0;
     a {
         text-decoration: none;
@@ -1216,7 +1230,7 @@ a.next:hover {
         border-right: thin solid $secondary;
         padding-right: 15px;
         margin-right: 15px;
-        font-size: 1.75em;
+        font-size: 1.5em;
     }
     li:last-child {
         border: none;
@@ -1250,5 +1264,6 @@ a.next:hover {
     @include span-columns(10);
     @include shift(2);
     @include omega();
+    margin-top: 20px;
     margin-bottom: 20px;
 }
