@@ -1733,6 +1733,9 @@ a.next:hover {
       .sponsor:last-child {
         margin-right: 0; } }
 
+.silver, .bronze, .media, .print {
+  min-height: 110px; }
+
 /* POSTSCRIPT */
 .share-links .container {
   text-align: center;
