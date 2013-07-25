@@ -15,6 +15,7 @@ layout: wrapper
     {% endif %}
 {% endif %}
 
+{% if page.video %}
 <section class="page-preface">
 	<div class="container">
 		<div class="video-box">
@@ -22,6 +23,13 @@ layout: wrapper
 		</div>
 	</div>
 </section>
+{% else %}
+<section class="page-preface">
+    <div class="container">
+
+    </div>
+</section>
+{% endif %}
 
 <article class="post-template">
 	<div class="container">
