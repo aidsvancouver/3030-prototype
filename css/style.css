@@ -184,7 +184,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
+  _font-family: "courier new", monospace;
   font-size: 1em; }
 
 /**
@@ -303,7 +303,7 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -475,7 +475,7 @@ table {
   position: absolute;
   left: 0;
   top: 0;
-  border: 10px solid #fff;
+  border: 10px solid white;
   background-repeat: no-repeat; }
 
 #lbPrevLink, #lbNextLink {
@@ -503,7 +503,7 @@ table {
   color: #666;
   line-height: 1.4em;
   text-align: left;
-  border: 10px solid #fff;
+  border: 10px solid white;
   border-top-style: none; }
 
 #lbCloseLink {
@@ -586,7 +586,7 @@ h2.page-subtitle, h2.page-heading {
   text-align: center; }
 
 h2.page-heading {
-  border-top: 10px solid #ddd;
+  border-top: 10px solid #dddddd;
   margin-bottom: 20px; }
 
 h3 {
@@ -643,7 +643,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -653,8 +653,8 @@ hr {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  border-left: thin solid #ddd;
-  border-right: thin solid #ddd;
+  border-left: thin solid #dddddd;
+  border-right: thin solid #dddddd;
   padding: 0px;
   padding: 0px;
   padding: 0px; }
@@ -860,7 +860,7 @@ ul.tabs {
     border-color: #777777; }
 
 fieldset {
-  border-left: 5px solid #ddd;
+  border-left: 5px solid #dddddd;
   padding: 10px; }
 
 label {
@@ -991,8 +991,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
 /* Timeline */
 .timeline {
   background-color: #222;
-  border-bottom: 3px solid #000;
-  border-top: 1px solid #bbb;
+  border-bottom: 3px solid black;
+  border-top: 1px solid #bbbbbb;
   width: 100%;
   height: 135px;
   overflow: hidden;
@@ -1003,7 +1003,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
     padding: 0px; }
   .timeline li {
     background-color: #ddd;
-    border-right: thin solid #bbb;
+    border-right: thin solid #bbbbbb;
     display: inline-block;
     width: 185px;
     height: 135px;
@@ -1075,7 +1075,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   position: fixed;
   top: 0;
   border-top: 0;
-  border-bottom: 3px solid #333; }
+  border-bottom: 3px solid #333333; }
 
 /* FRONT PAGE / LANDING */
 .landing-template {
@@ -1105,7 +1105,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       margin-right: 2.35765%;
       width: 48.82117%;
       margin-right: 0;
-      border-right: 2px solid #333;
+      border-right: 2px solid #333333;
       font-size: 1.5em;
       width: 62%; }
       .latest:last-child {
@@ -1195,7 +1195,7 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       padding: 0;
       width: 38%;
       background-color: #eee;
-      border-right: 2px solid #000;
+      border-right: 2px solid black;
       min-height: 380px; }
       .actions:last-child {
         margin-right: 0; }
@@ -1322,10 +1322,10 @@ a.acknowledgements {
       display: none; } }
   @media screen and (max-width: 720px) {
     .teaser-img {
-      border-top: thin solid #ddd; } }
+      border-top: thin solid #dddddd; } }
   @media screen and (min-width: 720px) {
     .teaser-img {
-      border: 1px solid #ddd; } }
+      border: 1px solid #dddddd; } }
 
 .teaser-img:hover {
   background-position: 0 -131px; }
@@ -1338,7 +1338,7 @@ a.acknowledgements {
     width: 100%;
     padding: 12px;
     border-top: thin solid #21b684;
-    border-bottom: thin solid #666; }
+    border-bottom: thin solid #666666; }
     .teaser-txt:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 720px) {
@@ -1350,9 +1350,9 @@ a.acknowledgements {
     padding: 10px 10px 30px 20px;
     width: 265px;
     z-index: 999;
-    -webkit-box-shadow: 2px 2px 2px 0px #AAAAAA;
+    -webkit-box-shadow: 2px 2px 2px 0px #aaaaaa;
     /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-    box-shadow: 2px 2px 2px 0px #AAAAAA; }
+    box-shadow: 2px 2px 2px 0px #aaaaaa; }
     .teaser-txt p {
       margin: 0; } }
 
@@ -1487,8 +1487,8 @@ a.next:hover {
     height: 100%; }
 
 .video-player {
-  border-right: 2px solid #333;
-  border-left: 2px solid #333; }
+  border-right: 2px solid #333333;
+  border-left: 2px solid #333333; }
 
 /* CONTENT */
 .page-title {
@@ -1526,7 +1526,7 @@ a.next:hover {
     float: left;
     margin-right: 2.35765%;
     width: 40.29137%;
-    border-left: thin solid #ddd;
+    border-left: thin solid #dddddd;
     width: 42.5%; }
     .rightColumn:last-child {
       margin-right: 0; } }
@@ -1618,7 +1618,7 @@ a.next:hover {
     list-style: none;
     margin-bottom: 10px; }
   .thanks-list .inner {
-    padding: 20px 20px 20px 50px; }
+    padding: 20px 20px 20px 20px; }
   .thanks-list h3 {
     color: #09835f;
     font-weight: normal;
@@ -1626,24 +1626,28 @@ a.next:hover {
     font-size: 1.75em;
     margin-top: 30px; }
 
-.thanks-left {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .thanks-left:last-child {
+@media screen and (min-width: 720px) {
+  .thanks-left {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
     margin-right: 0; }
+    .thanks-left:last-child {
+      margin-right: 0; }
+    .thanks-left .inner {
+      padding-left: 0; } }
 
-.thanks-right {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-right: 0; }
-  .thanks-right:last-child {
-    margin-right: 0; }
-  .thanks-right .inner {
-    padding-left: 0; }
+@media screen and (min-width: 720px) {
+  .thanks-right {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .thanks-right:last-child {
+      margin-right: 0; }
+    .thanks-right .inner {
+      padding-left: 20px; } }
 
 .thanks-logo {
   display: inline-block;
@@ -1739,7 +1743,7 @@ a.next:hover {
 /* POSTSCRIPT */
 .share-links .container {
   text-align: center;
-  border-top: thin solid #ddd;
+  border-top: thin solid #dddddd;
   padding: 20px 20px 20px 30px; }
 
 .facebook, .twitter, .google {
@@ -1870,7 +1874,7 @@ a.next:hover {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -1895,7 +1899,7 @@ a.next:hover {
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid; }
 
   thead {
