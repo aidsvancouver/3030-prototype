@@ -1085,6 +1085,8 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       display: block; } }
   .landing-template .container {
     border: 0; }
+  .landing-template .section-label, .landing-template .timeline-title {
+    font-size: 1.3em; }
 
 .latest {
   position: relative;
