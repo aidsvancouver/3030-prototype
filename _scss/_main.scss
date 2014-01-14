@@ -688,6 +688,15 @@ label {
     h4 {
         color: $lightGrey;
     }
+    
+    @include media($min720) {
+        @include span-columns(6);
+        min-height: 150px;
+    }
+    @include media($min1020) {
+        @include span-columns(12);
+        min-height: 127px;
+    }
 }
 
 .acknowledgements {
@@ -713,10 +722,22 @@ label {
         border-radius: 0;
         font-size: 1.25em;
         margin: 0;
-        min-height: 188px;
+        min-height: 125px;
         text-align: left;
     }
 }
+
+.donate {
+    @include media($min720) {
+        @include span-columns(6);
+        min-height: 150px;
+    }
+    @include media($min1020) {
+        @include span-columns(12);
+        min-height: 130px;
+    }
+}
+
 
 a.signup {
     background-color: $primary;

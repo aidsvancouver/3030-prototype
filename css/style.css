@@ -1219,6 +1219,24 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
   background: url(../img/action-donate.jpg) no-repeat; }
   .donate h4 {
     color: #eeeeee; }
+  @media screen and (min-width: 720px) {
+    .donate {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      min-height: 150px; }
+      .donate:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1020px) {
+    .donate {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      min-height: 127px; }
+      .donate:last-child {
+        margin-right: 0; } }
 
 .acknowledgements {
   background: url(../img/action-acknowledge.jpg) no-repeat; }
@@ -1256,10 +1274,29 @@ input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:fo
       border-radius: 0;
       font-size: 1.25em;
       margin: 0;
-      min-height: 188px;
+      min-height: 125px;
       text-align: left; }
       .signup:last-child, .donate:last-child, .acknowledgements:last-child {
         margin-right: 0; } }
+
+@media screen and (min-width: 720px) {
+  .donate {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    min-height: 150px; }
+    .donate:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 1020px) {
+  .donate {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    min-height: 130px; }
+    .donate:last-child {
+      margin-right: 0; } }
 
 a.signup {
   background-color: #09835f;
