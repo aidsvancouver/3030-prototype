@@ -1,0 +1,71 @@
+---
+layout: wrapper
+---
+{% if page.previous.url %}
+    {% if page.previous.altUrl %}
+    <a href="/{{ page.previous.altUrl }}" title="Previous Year: {{ page.previous.title }}" class="previous">
+        <div class="pager-bg"></div>
+        <div class="pager-txt">{{ page.previous.altPager }}</div>
+    </a>    
+    {% else %}
+    <a href="/{{ page.previous.title }}" title="Previous Year: {{ page.previous.title }}" class="previous">
+    	<div class="pager-bg"></div>
+    	<div class="pager-txt">{{ page.previous.title }}</div>
+    </a>
+    {% endif %}
+{% endif %}
+
+<section class="page-preface">
+    <div class="container">
+        <div class="video-box">
+            <iframe class="video-player" width="560" height="315" src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<article class="post-template">
+	<div class="container">
+		<header>
+	        {% if page.subtitle %}<hgroup>{% endif %}
+	            {% if page.title %}<h1 class="page-title" 
+                    {% if page.altUrl %}
+                    style="background: url(/img/titles/{{ page.altUrl }}.png); width: 330px;"
+                    {% else %}
+                    style="background: url(/img/titles/{{ page.title }}.png)"
+                    {% endif %}
+                >{{ page.title }}</h1>{% endif %}
+	            {% if page.subtitle %}<h2 class="page-subtitle">{{ page.subtitle }}</h2>{% endif %}
+	        {% if page.subtitle %}</hgroup>{% endif %}
+		</header>
+
+		<section class="article-body">
+<!-- -->
+			<div class="fullColumn">
+                <div class="info-box">
+                    <ul>
+                        {% for item in page.infoItem %}
+                        <li>
+                            {% if item.link %}
+                            <a href="{{ item.link }}" {% if item.type == "image" %} rel="lightbox" title="{{ item.item }}"{% else %} target="_blank" {% endif %}>
+                                {{ item.item }}
+                                <span class="ext-{{ item.type}}"> LINK</span>
+                            </a>
+                            {% else %}
+                            {{ item.item }}
+                            {% endif %}
+                        </li>
+                        {% endfor %}        
+                    </ul>
+                </div>      
+            </div>
+<!-- -->
+		</section>
+	</div>
+</article>
+
+{% if page.next.url %}
+<a href="/{{ page.next.title }}" title="Next Year: {{ page.next.title }}" class="next">
+	<div class="pager-bg"></div>
+	<div class="pager-txt">{{ page.next.title }}</div>
+</a>
+{% endif %}
